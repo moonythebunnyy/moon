@@ -1,0 +1,3232 @@
+if Glitchtale ~= "HKIsTotallyAbsolutelyGayAsf69" then 
+        game:GetService("StarterGui"):SetCore("SendNotification", {
+            Title = "Access Denied",
+            Text = "Overwrite Loading..",
+            Duration = 5
+        })
+    return 
+end
+
+Key = nil
+NullGlitchtale = nil
+Glitchtale = nil
+NullGlitchtaleKey= nil
+
+-- Fake Loading
+-- Customization
+HEADER_TEXT = "OVERWRITE"
+SMALLER_TEXT = "Overwrite Loading..\nMade by Glitchtale & HK001"
+DURATION = 5
+
+function showNotification()
+    screenGui = Instance.new("ScreenGui")
+    screenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+    
+    frame = Instance.new("Frame")
+    frame.Size = UDim2.new(0, 250, 0, 80)
+    frame.Position = UDim2.new(1, 300, 1, -100)
+    frame.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+    frame.BorderSizePixel = 0
+    frame.BackgroundTransparency = 0.1
+    frame.Parent = screenGui
+    
+    corner = Instance.new("UICorner")
+    corner.CornerRadius = UDim.new(0, 6)
+    corner.Parent = frame
+    
+    stroke = Instance.new("UIStroke")
+    stroke.Color = Color3.fromRGB(200, 0, 0)
+    stroke.Thickness = 2
+    stroke.Parent = frame
+    
+    header = Instance.new("TextLabel")
+    header.Size = UDim2.new(1, -20, 0, 20)
+    header.Position = UDim2.new(0, 10, 0, 8)
+    header.BackgroundTransparency = 1
+    header.Text = HEADER_TEXT
+    header.TextColor3 = Color3.fromRGB(255, 0, 0)
+    header.TextSize = 24
+    header.Font = Enum.Font.GothamBold
+    header.TextXAlignment = Enum.TextXAlignment.Left
+    header.Parent = frame
+    
+    smallText = Instance.new("TextLabel")
+    smallText.Size = UDim2.new(1, -20, 0, 40)
+    smallText.Position = UDim2.new(0, 10, 0, 32)
+    smallText.BackgroundTransparency = 1
+    smallText.Text = SMALLER_TEXT
+    smallText.TextColor3 = Color3.fromRGB(220, 0, 0)
+    smallText.TextSize = 12
+    smallText.Font = Enum.Font.Gotham
+    smallText.TextXAlignment = Enum.TextXAlignment.Left
+    smallText.TextYAlignment = Enum.TextYAlignment.Top
+    smallText.Parent = frame
+    
+    progressBg = Instance.new("Frame")
+    progressBg.Size = UDim2.new(1, -20, 0, 4)
+    progressBg.Position = UDim2.new(0, 10, 1, -12)
+    progressBg.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+    progressBg.BorderSizePixel = 0
+    progressBg.Parent = frame
+    
+    progressCorner = Instance.new("UICorner")
+    progressCorner.CornerRadius = UDim.new(1, 0)
+    progressCorner.Parent = progressBg
+    
+    progressFill = Instance.new("Frame")
+    progressFill.Size = UDim2.new(0, 0, 1, 0)
+    progressFill.BackgroundColor3 = Color3.fromRGB(200, 0, 0)
+    progressFill.BorderSizePixel = 0
+    progressFill.Parent = progressBg
+    
+    fillCorner = Instance.new("UICorner")
+    fillCorner.CornerRadius = UDim.new(1, 0)
+    fillCorner.Parent = progressFill
+    
+    tweenIn = game:GetService("TweenService"):Create(frame, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Position = UDim2.new(1, -270, 1, -100)})
+    tweenIn:Play()
+    
+    progressTween = game:GetService("TweenService"):Create(progressFill, TweenInfo.new(DURATION, Enum.EasingStyle.Linear, Enum.EasingDirection.Out), {Size = UDim2.new(1, 0, 1, 0)})
+    progressTween:Play()
+    
+    wait(DURATION)
+    
+    tweenOut = game:GetService("TweenService"):Create(frame, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {Position = UDim2.new(1, 300, 1, -100)})
+    tweenOut:Play()
+    
+    tweenOut.Completed:Wait()
+    screenGui:Destroy()
+end
+
+showNotification()
+
+--[[ Anticheat
+Deleted in this version
+]]
+
+--[[ Admin Control
+Is it patched? 🥀
+loadstring(game:HttpGet("https://raw.githubusercontent.com/JustSayy/Scripts/elemental/gamecontrol"))()
+]]
+
+-- Main Script
+Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))() -- Ima change this later to library
+
+Window = Rayfield:CreateWindow({
+   Name = "EPT | Glitch's OVERWRITE",
+   Icon = 125011622877059, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
+   LoadingTitle = "Best EPT Script frfr...",
+   LoadingSubtitle = "by The Old Gen Magicians",
+   ShowText = "EPT",
+   -- Check https://docs.sirius.menu/rayfield/configuration/themes
+   	Theme = {
+    TextColor = Color3.fromRGB(255, 0, 0),  -- White (unchanged)
+
+    Background = Color3.fromRGB(0, 0, 0),       -- Pure black
+    Topbar = Color3.fromRGB(20, 0, 0),          -- Dark red
+    Shadow = Color3.fromRGB(10, 0, 0),          -- Deeper red-black
+
+    NotificationBackground = Color3.fromRGB(15, 0, 0),  -- Dark red
+    NotificationActionsBackground = Color3.fromRGB(80, 0, 0),  -- Medium red
+
+    TabBackground = Color3.fromRGB(40, 0, 0),   -- Red-black
+    TabStroke = Color3.fromRGB(60, 0, 0),       -- Brighter red stroke
+    TabBackgroundSelected = Color3.fromRGB(180, 0, 0),  -- Bright red selected
+    TabTextColor = Color3.fromRGB(255, 0, 0),  -- White text
+    SelectedTabTextColor = Color3.fromRGB(0, 0, 0),  -- White (contrast)
+
+    ElementBackground = Color3.fromRGB(20, 0, 0),  -- Dark red
+    ElementBackgroundHover = Color3.fromRGB(40, 0, 0),  -- Hover state
+    SecondaryElementBackground = Color3.fromRGB(10, 0, 0),  -- Darker variant
+    ElementStroke = Color3.fromRGB(60, 0, 0),     -- Red border
+    SecondaryElementStroke = Color3.fromRGB(40, 0, 0),  -- Darker stroke
+
+    SliderBackground = Color3.fromRGB(30, 0, 0),  -- Dark red track
+    SliderProgress = Color3.fromRGB(100, 0, 0),   -- Bright red progress
+    SliderStroke = Color3.fromRGB(100, 0, 0),     -- Red border
+
+    ToggleBackground = Color3.fromRGB(20, 0, 0),  -- Dark red bg
+    ToggleEnabled = Color3.fromRGB(180, 0, 0),    -- Bright red (ON)
+    ToggleDisabled = Color3.fromRGB(100, 0, 0),  -- Gray (OFF)
+    ToggleEnabledStroke = Color3.fromRGB(220, 0, 0),  -- Glowing red
+    ToggleDisabledStroke = Color3.fromRGB(140, 0, 0),  -- Gray stroke
+    ToggleEnabledOuterStroke = Color3.fromRGB(40, 0, 0),  -- Dark red
+    ToggleDisabledOuterStroke = Color3.fromRGB(60, 0, 0),  -- Dark gray
+
+    DropdownSelected = Color3.fromRGB(60, 0, 0),  -- Dark red
+    DropdownUnselected = Color3.fromRGB(20, 0, 0),  -- Darker red
+	DropdownStroke = Color3.fromRGB(20, 0, 0),
+
+    InputBackground = Color3.fromRGB(20, 0, 0),   -- Dark red
+    InputStroke = Color3.fromRGB(60, 0, 0),       -- Red border
+    PlaceholderColor = Color3.fromRGB(60, 0, 0)  -- Gray (unchanged)
+},
+
+   ToggleUIKeybind = "F",
+   
+   DisableRayfieldPrompts = true,
+   DisableBuildWarnings = false,
+
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = "EPT",
+      FileName = "Config"
+   },
+
+   Discord = {
+      Enabled = true,
+      Invite = "RYc29sAKW3", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ ABCD would be ABCD
+      RememberJoins = true
+   },
+
+   KeySystem = false,
+   KeySettings = {
+      Title = "Glitchtale's Verification",
+      Subtitle = "Elemental Power Tycoon",
+      Note = "Join Discord Server : RYc29sAKW3",
+      FileName = "Key",
+      SaveKey = true,
+      GrabKeyFromSite = true,
+      Key = {"https://raw.githubusercontent.com/JustSayy/Scripts/elemental/game2"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
+})
+
+Rayfield:Notify({
+   Title = "EPT Script",
+   Content = "Successfully Loaded",
+   Duration = 2,
+   Image = 4483362458,
+})
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+local Workspace = game:GetService("Workspace")
+
+-- Tabs
+Tab = Window:CreateTab("General", "user-round") -- Title, Image
+
+Section = Tab:CreateSection("EPT General")
+
+Paragraph = Tab:CreateParagraph({Title = "CREDIT", Content = "Script by glitchtale & sunnytherabbit\nRayfield UI by shlex, iRay, Max"})
+
+Section = Tab:CreateSection("Changelog")
+
+Paragraph = Tab:CreateParagraph({Title = "CHANGELOG", Content = "1.0 : Added ESP & Aimbot\n2.0 : Added More Features & No Blur+Clear Vision\n3.0 : Mobile Support & Added Stats Modifier\n4.0 : Fixed+Improved Autorebirth\n5.0 : Added ADMIN Tab Feature"})
+
+Section = Tab:CreateSection("Admin Hub")
+
+Button = Tab:CreateButton({
+   Name = "Sirius Menu",
+   Info = "Press To Execute",
+   Interact = 'Click',
+   Callback = function()
+  loadstring(game:HttpGet("https://sirius.menu/sirius"))()
+end,
+})
+
+Button = Tab:CreateButton({
+   Name = "Infinite Yield",
+   Info = "Press To Execute",
+   Interact = 'Click',
+   Callback = function()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+end,
+})
+
+Button = Tab:CreateButton({
+   Name = "Nameless Admin",
+   Info = "Press To Execute",
+   Interact = 'Click',
+   Callback = function()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source"))()
+end,
+})
+
+Button = Tab:CreateButton({
+   Name = "Silent Aim (Right Shift)",
+   Info = "Press To Execute",
+   Interact = 'Click',
+   Callback = function()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/Averiias/Universal-SilentAim/main/main.lua"))()
+end,
+})
+
+Button = Tab:CreateButton({
+   Name = "FE Animation Changer",
+   Info = "Press To Execute",
+   Interact = 'Click',
+   Callback = function()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/CITY512/scripts/main/freeanims.lua"))()
+end,
+})
+
+Section = Tab:CreateSection("Player Visual")
+local vipEnabled = false
+local vipCharacterConnection = nil
+
+VipToggle = Tab:CreateToggle({
+    Name = "VIP Chat Tag",
+    CurrentValue = false,
+    Flag = "vipToggle",
+    Callback = function(Value)
+        vipEnabled = Value
+        local player = game:GetService("Players").LocalPlayer
+        
+        if Value then
+            player:SetAttribute("VIP", true)
+            
+            if player.Character then
+                local humanoid = player.Character:FindFirstChildOfClass("Humanoid")
+                if humanoid then
+                    humanoid:SetAttribute("VIP", true)
+                end
+            end
+            
+            vipCharacterConnection = player.CharacterAdded:Connect(function(char)
+                char:WaitForChild("Humanoid"):SetAttribute("VIP", true)
+            end)
+            
+            Rayfield:Notify({
+                Title = "VIP Status",
+                Content = "Enabled",
+                Duration = 2,
+                Image = 4483362458,
+            })
+        else
+            player:SetAttribute("VIP", false)
+            
+            if player.Character then
+                local humanoid = player.Character:FindFirstChildOfClass("Humanoid")
+                if humanoid then
+                    humanoid:SetAttribute("VIP", false)
+                end
+            end
+            
+            if vipCharacterConnection then
+                vipCharacterConnection:Disconnect()
+                vipCharacterConnection = nil
+            end
+            
+            Rayfield:Notify({
+                Title = "VIP Status",
+                Content = "Disabled",
+                Duration = 2,
+                Image = 4483362458,
+            })
+        end
+    end
+})
+
+local x2MoneyEnabled = false
+local x2MoneyCharacterConnection = nil
+
+X2MoneyToggle = Tab:CreateToggle({
+    Name = "2x Money",
+    CurrentValue = false,
+    Flag = "x2MoneyToggle",
+    Callback = function(Value)
+        x2MoneyEnabled = Value
+        local player = game:GetService("Players").LocalPlayer
+        
+        if Value then
+            player:SetAttribute("x2Money", true)
+            
+            -- Setup for current character
+            if player.Character then
+                local humanoid = player.Character:FindFirstChildOfClass("Humanoid")
+                if humanoid then
+                    humanoid:SetAttribute("x2Money", true)
+                end
+            end
+            
+            x2MoneyCharacterConnection = player.CharacterAdded:Connect(function(char)
+                char:WaitForChild("Humanoid"):SetAttribute("x2Money", true)
+            end)
+            
+            Rayfield:Notify({
+                Title = "2x Money",
+                Content = "Enabled",
+                Duration = 2,
+                Image = 4483362458,
+            })
+        else
+            player:SetAttribute("x2Money", false)
+            
+            if player.Character then
+                local humanoid = player.Character:FindFirstChildOfClass("Humanoid")
+                if humanoid then
+                    humanoid:SetAttribute("x2Money", false)
+                end
+            end
+            
+            if x2MoneyCharacterConnection then
+                x2MoneyCharacterConnection:Disconnect()
+                x2MoneyCharacterConnection = nil
+            end
+            
+            Rayfield:Notify({
+                Title = "2x Money",
+                Content = "Disabled",
+                Duration = 2,
+                Image = 4483362458,
+            })
+        end
+    end
+})
+
+Section = Tab:CreateSection("Player Settings")
+
+local player = Players.LocalPlayer
+
+-- Initialize stored values
+local storedWalkSpeed = nil
+local storedJumpPower = nil
+
+-- Function to apply speed settings to a character
+local function applySpeedSettings(character)
+    if not character then return end
+    
+    local humanoid = character:FindFirstChild("Humanoid")
+    if humanoid then
+        if storedWalkSpeed then
+            humanoid.WalkSpeed = storedWalkSpeed
+        end
+        if storedJumpPower then
+            humanoid.JumpPower = storedJumpPower
+        end
+    end
+end
+
+-- Handle character changes (respawns)
+player.CharacterAdded:Connect(function(character)
+    applySpeedSettings(character)
+end)
+
+-- Apply to existing character if available
+if player.Character then
+    applySpeedSettings(player.Character)
+end
+
+-- Heartbeat loop to enforce values
+game:GetService("RunService").Heartbeat:Connect(function()
+    if player.Character then
+        local humanoid = player.Character:FindFirstChild("Humanoid")
+        if humanoid then
+            -- Override WalkSpeed if set
+            if storedWalkSpeed and humanoid.WalkSpeed ~= storedWalkSpeed then
+                humanoid.WalkSpeed = storedWalkSpeed
+            end
+            
+            -- Override JumpPower if set
+            if storedJumpPower and humanoid.JumpPower ~= storedJumpPower then
+                humanoid.JumpPower = storedJumpPower
+            end
+        end
+    end
+end)
+
+-- Create sliders
+Tab:CreateSlider({
+    Name = "Walkspeed",
+    Range = {16, 200},
+    Increment = 1,
+    Suffix = "Speed",
+    CurrentValue = 50,
+    Flag = "WalkSpeedSlider",
+    Callback = function(walkspeedamount)
+        storedWalkSpeed = walkspeedamount
+        if player.Character then
+            local humanoid = player.Character:FindFirstChild("Humanoid")
+            if humanoid then
+                humanoid.WalkSpeed = storedWalkSpeed
+            end
+        end
+    end,
+})
+
+Tab:CreateSlider({
+    Name = "Jumppower",
+    Range = {50, 200},
+    Increment = 1,
+    Suffix = "Jump",
+    CurrentValue = 95,
+    Flag = "JumpPowerSlider",
+    Callback = function(jumppoweramount)
+        storedJumpPower = jumppoweramount
+        if player.Character then
+            local humanoid = player.Character:FindFirstChild("Humanoid")
+            if humanoid then
+                humanoid.JumpPower = storedJumpPower
+            end
+        end
+    end,
+})
+
+Slider = Tab:CreateSlider({
+   Name = "Gravity",
+   Range = {0, 1000},
+   Increment = 1,
+   Suffix = "Gravity",
+   CurrentValue = 196,
+   Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(gravityamount) -- should be the same
+   game.Players.LocalPlayer.Character.Humanoid.JumpPower = gravityamount
+end,
+})
+
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+local Camera = workspace.CurrentCamera
+
+-- Create the FOV slider
+FOVSlider = Tab:CreateSlider({
+   Name = "Field of View",
+   Range = {30, 120},  -- Standard FOV range (can be adjusted)
+   Increment = 1,      -- Smooth increments
+   Suffix = "°",       -- Degree symbol
+   CurrentValue = Camera.FieldOfView or 70,  -- Default to current FOV
+   Flag = "FOVSlider",
+   Callback = function(Value)
+       -- Update the camera's field of view
+       Camera.FieldOfView = Value
+       
+       -- Optional: You could add effects when changing FOV
+       -- For example, a subtle zoom effect
+   end,
+})
+
+-- Optional: Reset to default button
+ResetButton = Tab:CreateButton({
+   Name = "Reset FOV to Default",
+   Callback = function()
+       local defaultFOV = 70  -- Standard Roblox default
+       FOVSlider:Set(defaultFOV)
+       Camera.FieldOfView = defaultFOV
+   end,
+})
+
+Tab:CreateToggle({
+    Name = "Noclip",
+    CurrentValue = false,
+    Callback = function(noclip)
+        if noclip then
+            _G.noclip = true
+            Rayfield:Notify({
+                Title = "Noclip Mode",
+                Content = "Enabled",
+                Duration = 3,
+                Image = 4483362458,
+            })
+            local Loop  
+                    game:GetService('RunService').Stepped:connect(function()
+                        if _G.noclip then
+                            for i, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+                                if v:IsA("BasePart") then
+                                    if v.CanCollide ~= not _G.noclip then
+                                        v.CanCollide = not _G.noclip
+                                    end
+                                end
+                            end
+                        end
+                    end)
+             else
+            Rayfield:Notify({
+                Title = "Noclip - Notification",
+                Content = "Disabled",
+                Duration = 3,
+                Image = 4483362458,
+            })
+            _G.noclip = false
+        end
+    end,
+})
+
+Tab = Window:CreateTab("Main", "home")
+
+Section = Tab:CreateSection("EPT Main")
+
+Paragraph = Tab:CreateParagraph({Title = "ERRORS", Content = "Known Errors: Inf Dash does not work in some executors like Swift, Volcano. But does work in Velocity and Bunni."})
+
+Section = Tab:CreateSection("Choose Element")
+
+Dropdown = Tab:CreateDropdown({
+   Name = "Switch Element",
+   Options = {"Light","Earth", "Bone", "Devil", "Fire", "Venom", "Nature", "Darkness", "Thunder", "Space", "Crystal", "Ice", "Time", "Technology", "Gravity", "Lava", "Super Sonic", "Water", "For Hire!"},
+   CurrentOption = {},
+   MultipleOptions = false,
+   Flag = "switchElement",
+   Callback = function(Options)
+       local selectedElement = Options[1] -- Get the selected element
+       game.ReplicatedStorage.RemoteEvent:FireServer("ReplaceElement", selectedElement)
+       Rayfield:Notify({
+           Title = "Switch Element",
+           Content = "Switched to " .. selectedElement, -- Concatenate the string with the selected element
+           Duration = 2,
+           Image = 4483362458,
+       })
+   end
+})
+
+Button = Tab:CreateButton({
+   Name = "Bypass Super Sonic Element",
+   Callback = function()
+           Rayfield:Notify({
+   Title = "Bypass Super Sonic",
+   Content = "Bypassed",
+   Duration = 2,
+   Image = 4483362458,
+})
+   game.ReplicatedStorage.RemoteEvent:FireServer("ReplaceElement", "Super Sonic")
+   end
+})
+
+Button = Tab:CreateButton({
+   Name = "Bypass Water Element",
+   Callback = function()
+           Rayfield:Notify({
+   Title = "Bypass Water",
+   Content = "Bypassed",
+   Duration = 2,
+   Image = 4483362458,
+})
+   game.ReplicatedStorage.RemoteEvent:FireServer("ReplaceElement", "Water")
+   end
+})
+
+Section = Tab:CreateSection("Stats Booster")
+
+local Player = game:GetService("Players").LocalPlayer
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local speedMultiplier = 0
+local jumpMultiplier = 0
+local healthMultiplier = 0
+
+SpeedInput = Tab:CreateInput({
+    Name = "Speed Boost", 
+    CurrentValue = "0",
+    PlaceholderText = "Enter speed boost",
+    RemoveTextAfterFocusLost = false,
+    Flag = "SpeedBoost",
+    Callback = function(Text) end
+})
+
+JumpInput = Tab:CreateInput({
+    Name = "Jump Boost",
+    CurrentValue = "0",
+    PlaceholderText = "Enter jump boost",
+    RemoveTextAfterFocusLost = false,
+    Flag = "JumpBoost",
+    Callback = function(Text) end
+})
+
+HealthInput = Tab:CreateInput({
+    Name = "Health Boost",
+    CurrentValue = "0",
+    PlaceholderText = "Enter health boost",
+    RemoveTextAfterFocusLost = false,
+    Flag = "HealthBoost",
+    Callback = function(Text) end
+})
+
+ApplyButton = Tab:CreateButton({
+    Name = "Apply Boosts",
+    Callback = function()
+        jumpMultiplier = tonumber(JumpInput.CurrentValue) or 0
+        speedMultiplier = tonumber(SpeedInput.CurrentValue) or 0
+        healthMultiplier = tonumber(HealthInput.CurrentValue) or 0
+        
+        for _ = 1, speedMultiplier do
+            ReplicatedStorage.RemoteEvent:FireServer('add_point', 2)
+        end
+        
+        for _ = 1, math.floor(jumpMultiplier/2) do
+            ReplicatedStorage.RemoteEvent:FireServer('add_point', 1)
+        end
+
+        for _ = 1, math.floor(healthMultiplier/5) do
+            ReplicatedStorage.RemoteEvent:FireServer('add_point', 4)
+        end
+
+        Rayfield:Notify({
+            Title = "Multipliers Applied",
+            Content = string.format("Jump: +%d | Speed: +%d | Health: +%d", 
+                jumpMultiplier, 
+                speedMultiplier, 
+                healthMultiplier),
+            Duration = 5,
+            Image = 4483362458
+        })
+    end
+})
+
+Section = Tab:CreateSection("Defense & Others")
+
+Paragraph = Tab:CreateParagraph({Title = "Infinite Dash", Content = "On mobile, you have to press around the dash button to input a dash,\nnot the dash button itself. (It’s like an invisible button or something.)"})
+
+JumpInput:Set("0")
+SpeedInput:Set("0") 
+HealthInput:Set("0")
+
+local Player = game:GetService("Players").LocalPlayer
+local UIS = game:GetService("UserInputService")
+local RunService = game:GetService("RunService")
+
+local dashEnabled = false
+local pcConnection = nil
+local mobileConnection = nil
+
+local function executeDash()
+    require(game.ReplicatedStorage.Magic.Ability.Dash).Client(Player, {}, true)
+end
+
+local function isInDashZone(touchPosition)
+    local screenSize = workspace.CurrentCamera.ViewportSize
+    local zoneStart = Vector2.new(screenSize.X * 0.75, screenSize.Y * 0.5)
+    local zoneEnd = Vector2.new(screenSize.X, screenSize.Y)
+    return touchPosition.X >= zoneStart.X and touchPosition.Y >= zoneStart.Y
+       and touchPosition.X <= zoneEnd.X and touchPosition.Y <= zoneEnd.Y
+end
+
+local function setupConnections()
+    pcConnection = UIS.InputBegan:Connect(function(input, gameProcessed)
+        if not gameProcessed and input.KeyCode == Enum.KeyCode.Q then
+            executeDash()
+        end
+    end)
+
+    mobileConnection = UIS.TouchStarted:Connect(function(touch, gameProcessed)
+        if not gameProcessed and isInDashZone(touch.Position) then
+            executeDash()
+        end
+    end)
+end
+
+local function cleanupConnections()
+    if pcConnection then
+        pcConnection:Disconnect()
+        pcConnection = nil
+    end
+    if mobileConnection then
+        mobileConnection:Disconnect()
+        mobileConnection = nil
+    end
+end
+
+DashToggle = Tab:CreateToggle({
+    Name = "Infinite Dash",
+    CurrentValue = false,
+    Flag = "infDashToggle",
+    Callback = function(Value)
+        dashEnabled = Value
+        if Value then
+Rayfield:Notify({
+   Title = "Infinite Dash",
+   Content = "Enabled",
+   Duration = 2,
+   Image = 4483362458,
+})
+            setupConnections()
+        else
+            cleanupConnections()
+        end
+    end
+})
+
+game:GetService("Players").PlayerRemoving:Connect(function(leavingPlayer)
+    if leavingPlayer == Player then
+        cleanupConnections()
+    end
+end)
+
+Rayfield:Notify({
+   Title = "Infinite Dash",
+   Content = "Disabled",
+   Duration = 2,
+   Image = 4483362458,
+})
+
+local infJumpEnabled = false
+local autoJumpConnection = nil
+local characterAddedConnection = nil
+local inputBeganConnection = nil
+
+Toggle = Tab:CreateToggle({
+    Name = "Infinite Jump",
+    CurrentValue = false,
+    Flag = "infJumpToggle",
+    Callback = function(Value)
+        infJumpEnabled = Value
+        
+        if Value then
+            -- Activate Inf Jump
+            Rayfield:Notify({
+                Title = "Infinite Jump",
+                Content = "Enabled",
+                Duration = 2,
+                Image = 4483362458,
+            })
+            
+            local Players = game:GetService("Players")
+            local RunService = game:GetService("RunService")
+            local Player = Players.LocalPlayer
+            local UIS = game:GetService("UserInputService")
+            local TextService = game:GetService("TextService")
+
+            local function setupAutoJump()
+                if autoJumpConnection then
+                    autoJumpConnection:Disconnect()
+                    autoJumpConnection = nil
+                end
+                
+                local Character = Player.Character
+                if not Character then return end
+                
+                local Humanoid = Character:FindFirstChild("Humanoid")
+                if not Humanoid then
+                    Humanoid = Character:WaitForChild("Humanoid")
+                end
+                
+                autoJumpConnection = RunService.Heartbeat:Connect(function()
+                    if infJumpEnabled and Humanoid and Humanoid.Jump then
+                        Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+                    end
+                end)
+            end
+
+            if Player.Character then
+                setupAutoJump()
+            end
+
+            characterAddedConnection = Player.CharacterAdded:Connect(setupAutoJump)
+
+            inputBeganConnection = UIS.InputBegan:Connect(function(input, gameProcessed)
+                -- Skip if typing in chat or text box
+                if gameProcessed then return end
+                
+                -- Check if any text box is focused
+                local textBoxFocused = false
+                for _, gui in pairs(Player.PlayerGui:GetDescendants()) do
+                    if gui:IsA("TextBox") and gui:IsFocused() then
+                        textBoxFocused = true
+                        break
+                    end
+                end
+                if textBoxFocused then return end
+                
+                if infJumpEnabled and input.KeyCode == Enum.KeyCode.Space then
+                    game.ReplicatedStorage.Remotes.DoMagic:FireServer("Ability", "Jump", {})
+                    require(game.ReplicatedStorage.Magic.Ability.Jump).Client(Player, {}, true)
+                end
+            end)
+        else
+            -- Deactivate Inf Jump
+            Rayfield:Notify({
+                Title = "Infinite Jump",
+                Content = "Disabled",
+                Duration = 2,
+                Image = 4483362458,
+            })
+            
+            -- Clean up connections
+            if autoJumpConnection then
+                autoJumpConnection:Disconnect()
+                autoJumpConnection = nil
+            end
+            
+            if characterAddedConnection then
+                characterAddedConnection:Disconnect()
+                characterAddedConnection = nil
+            end
+            
+            if inputBeganConnection then
+                inputBeganConnection:Disconnect()
+                inputBeganConnection = nil
+            end
+        end
+    end
+})
+
+local handsToggleActive = false
+local handsLoopConnection = nil
+
+Toggle = Tab:CreateToggle({
+    Name = "Invisible Hands Effects",
+    CurrentValue = false,
+    Flag = "invisibleHands",
+    Callback = function(Value)
+        handsToggleActive = Value
+        
+        if Value then
+            -- Disable any existing connection before creating new one
+            if handsLoopConnection then
+                handsLoopConnection:Disconnect()
+                handsLoopConnection = nil
+            end
+            
+            -- Create new loop connection
+            handsLoopConnection = game:GetService("RunService").Heartbeat:Connect(function()
+                if handsToggleActive then
+                    local args = {
+                        "toggle_hands",
+                        false
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+                else
+                    if handsLoopConnection then
+                        handsLoopConnection:Disconnect()
+                        handsLoopConnection = nil
+                    end
+                end
+            end)
+            
+            Rayfield:Notify({
+                Title = "Invisible Hands Effect",
+                Content = "Enabled",
+                Duration = 2,
+                Image = 4483362458,
+            })
+        else
+            -- Clean up connection when disabled
+            if handsLoopConnection then
+                handsLoopConnection:Disconnect()
+                handsLoopConnection = nil
+            end
+            
+            local args = {
+                "toggle_hands",
+                true  -- Assuming true makes hands visible again
+            }
+            game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+            
+            Rayfield:Notify({
+                Title = "Invisible Hands Effect",
+                Content = "Disabled",
+                Duration = 2,
+                Image = 4483362458,
+            })
+        end
+    end
+})
+
+local cameraShakeEnabled = false
+local originalCameraShaker = nil
+local cameraShakerClone = nil
+
+CameraShakeToggle = Tab:CreateToggle({
+    Name = "Anti Camera Shake",
+    CurrentValue = false,
+    Flag = "cameraShakeToggle",
+    Callback = function(Value)
+        cameraShakeEnabled = Value
+        local playerScripts = game:GetService("Players").LocalPlayer:WaitForChild("PlayerScripts")
+        
+        if Value then
+            -- Disable CameraShaker
+            originalCameraShaker = playerScripts:FindFirstChild("CameraShaker")
+            if originalCameraShaker then
+                cameraShakerClone = originalCameraShaker:Clone()
+                originalCameraShaker:Destroy()
+            end
+            
+            Rayfield:Notify({
+                Title = "Camera Shake",
+                Content = "Disabled",
+                Duration = 2,
+                Image = 4483362458,
+            })
+        else
+            -- Re-enable CameraShaker
+            if originalCameraShaker and not playerScripts:FindFirstChild("CameraShaker") then
+                cameraShakerClone.Parent = playerScripts
+                cameraShakerClone = nil
+                originalCameraShaker = nil
+            end
+            
+            Rayfield:Notify({
+                Title = "Camera Shake",
+                Content = "Enabled",
+                Duration = 2,
+                Image = 4483362458,
+            })
+        end
+    end
+})
+
+-- Cleanup if player leaves
+game:GetService("Players").PlayerRemoving:Connect(function(player)
+    if player == game.Players.LocalPlayer and not cameraShakeEnabled then
+        if cameraShakerClone and not player.PlayerScripts:FindFirstChild("CameraShaker") then
+            cameraShakerClone.Parent = player.PlayerScripts
+        end
+    end
+end)
+
+local laserConnection = nil -- Store connection externally
+
+Toggle = Tab:CreateToggle({
+    Name = "Anti Laser Door",
+    CurrentValue = false,
+    Flag = "laserDoor",
+    Callback = function(Value)
+        if Value then
+Rayfield:Notify({
+   Title = "Anti Laser Door",
+   Content = "Enabled",
+   Duration = 2,
+   Image = 4483362458,
+})
+            -- Disable any existing connection before creating new one
+            if laserConnection then
+                laserConnection:Disconnect()
+                laserConnection = nil
+            end
+            
+            laserConnection = game:GetService("RunService").Heartbeat:Connect(function()
+                for _, tycoon in pairs(workspace.Tycoons:GetChildren()) do
+                    if tycoon:FindFirstChild("Assets") then
+                        local lasers = tycoon.Assets:FindFirstChild("Lasers")
+                        if lasers then
+                            for _, descendant in pairs(lasers:GetDescendants()) do
+                                if descendant.Name == "Hitbox" and descendant:IsA("BasePart") then
+                                    descendant:Destroy()
+                                end
+                            end
+                        end
+                    end
+                end
+            end)
+        else
+Rayfield:Notify({
+   Title = "Anti Laser Door",
+   Content = "Disabled",
+   Duration = 2,
+   Image = 4483362458,
+})
+            -- Clean up connection when disabled
+            if laserConnection then
+                laserConnection:Disconnect()
+                laserConnection = nil
+            end
+        end
+    end
+})
+
+local antiVoidEnabled = false
+local heartbeatConnection = nil
+local stateChangedConnection = nil
+local voidEffect = nil
+local player = Players.LocalPlayer
+local character = nil
+local humanoid = nil
+local voidLevel = -100
+local lastSafePosition = Vector3.new(-114, 7, 124)
+local positionHistory = {}
+local maxHistoryTime = 1
+local minGroundDistance = 5
+
+local function isPositionOnGround(position)
+    local rayOrigin = position + Vector3.new(0, 0.5, 0)
+    local rayDirection = Vector3.new(0, -minGroundDistance, 0)
+    local raycastParams = RaycastParams.new()
+    raycastParams.FilterDescendantsInstances = {character}
+    raycastParams.FilterType = Enum.RaycastFilterType.Blacklist
+    local raycastResult = Workspace:Raycast(rayOrigin, rayDirection, raycastParams)
+    if raycastResult and raycastResult.Instance then
+        return true, raycastResult.Position + Vector3.new(0, 0.5, 0)
+    end
+    return false
+end
+
+local function updateSafePosition()
+    if not character or not character:FindFirstChild("HumanoidRootPart") then return end
+    local rootPart = character.HumanoidRootPart
+    local currentTime = os.clock()
+    if rootPart.Position.Y > voidLevel and humanoid:GetState() ~= Enum.HumanoidStateType.Freefall then
+        local onGround, groundPosition = isPositionOnGround(rootPart.Position)
+        if onGround then
+            table.insert(positionHistory, {
+                position = groundPosition,
+                time = currentTime
+            })
+            while #positionHistory > 0 and (currentTime - positionHistory[1].time) > maxHistoryTime do
+                table.remove(positionHistory, 1)
+            end
+            if #positionHistory > 0 then
+                lastSafePosition = positionHistory[1].position
+            end
+        end
+    end
+end
+
+local function checkVoid()
+    if not character or not character:FindFirstChild("HumanoidRootPart") then return end
+    local rootPart = character.HumanoidRootPart
+    if rootPart.Position.Y < voidLevel then
+        local safePos = lastSafePosition
+        for i = #positionHistory, 1, -1 do
+            if positionHistory[i].position.Y > voidLevel then
+                safePos = positionHistory[i].position
+                break
+            end
+        end
+        local onGround, adjustedPos = isPositionOnGround(safePos)
+        if not onGround then
+            local raycastParams = RaycastParams.new()
+            raycastParams.FilterDescendantsInstances = {character}
+            raycastParams.FilterType = Enum.RaycastFilterType.Blacklist
+            local rayOrigin = safePos + Vector3.new(0, 50, 0)
+            local rayDirection = Vector3.new(0, -100, 0)
+            local raycastResult = Workspace:Raycast(rayOrigin, rayDirection, raycastParams)
+            if raycastResult and raycastResult.Instance then
+                safePos = raycastResult.Position + Vector3.new(0, 0.5, 0)
+            end
+        end
+        character:SetPrimaryPartCFrame(CFrame.new(safePos))
+        if rootPart:FindFirstChild("BodyVelocity") then
+            rootPart.BodyVelocity.Velocity = Vector3.new(0, 0, 0)
+        end
+        positionHistory = {}
+    end
+end
+
+--[[
+local function createVoidEffect()
+    local effect = Instance.new("Part")
+    effect.Size = Vector3.new(1000, 1, 1000)
+    effect.Position = Vector3.new(0, voidLevel, 0)
+    effect.Anchored = true
+    effect.Transparency = 0.7
+    effect.Color = Color3.fromRGB(255, 0, 0)
+    effect.CanCollide = false
+    effect.Name = "VoidBarrierVisual"
+    effect.Parent = Workspace
+    return effect
+end
+]]
+
+
+local function setupCharacter(newCharacter)
+    character = newCharacter
+    humanoid = character:WaitForChild("Humanoid")
+end
+
+AntiVoidToggle = Tab:CreateToggle({
+    Name = "Anti Void & Anti Void Dark Arc",
+    CurrentValue = false,
+    Flag = "antiVoidToggle",
+    Callback = function(Value)
+        antiVoidEnabled = Value
+        
+        if Value then
+            Rayfield:Notify({
+                Title = "Anti Void",
+                Content = "Enabled",
+                Duration = 2,
+                Image = 4483362458,
+            })
+            character = player.Character or player.CharacterAdded:Wait()
+            setupCharacter(character)
+            
+            heartbeatConnection = RunService.Heartbeat:Connect(function()
+                if antiVoidEnabled then
+                    updateSafePosition()
+                    checkVoid()
+                end
+            end)
+            
+            stateChangedConnection = humanoid.StateChanged:Connect(function(oldState, newState)
+                if antiVoidEnabled and newState == Enum.HumanoidStateType.FallingDown and character.HumanoidRootPart.Position.Y < voidLevel then
+                    humanoid:ChangeState(Enum.HumanoidStateType.GettingUp)
+                    checkVoid()
+                end
+            end)
+            
+            player.CharacterAdded:Connect(function(newCharacter)
+                if antiVoidEnabled then
+                    setupCharacter(newCharacter)
+                end
+            end)
+            
+        else
+            Rayfield:Notify({
+                Title = "Anti Void",
+                Content = "Disabled",
+                Duration = 2,
+                Image = 4483362458,
+            })
+            if heartbeatConnection then
+                heartbeatConnection:Disconnect()
+                heartbeatConnection = nil
+            end
+            
+            if stateChangedConnection then
+                stateChangedConnection:Disconnect()
+                stateChangedConnection = nil
+            end
+            
+            if voidEffect then
+                voidEffect:Destroy()
+                voidEffect = nil
+            end
+        end
+    end
+})
+
+local antiRagdollEnabled = false
+local characterConnections = {}
+local characterAddedConnection = nil
+
+local function cleanupConnections()
+    for _, connections in pairs(characterConnections) do
+        for _, conn in ipairs(connections) do
+            conn:Disconnect()
+        end
+    end
+    characterConnections = {}
+    
+    if characterAddedConnection then
+        characterAddedConnection:Disconnect()
+        characterAddedConnection = nil
+    end
+end
+
+local function setupCharacter(character)
+    if not antiRagdollEnabled then return end
+    
+    local humanoid = character:WaitForChild("Humanoid")
+    humanoid.Sit = false
+    
+    characterConnections[character] = {}
+    local connections = characterConnections[character]
+    
+    local function handleBadState(newState)
+        if newState == Enum.HumanoidStateType.Ragdoll or 
+           newState == Enum.HumanoidStateType.FallingDown or 
+           newState == Enum.HumanoidStateType.PlatformStanding or
+           newState == Enum.HumanoidStateType.Seated then
+            humanoid:ChangeState(Enum.HumanoidStateType.GettingUp)
+            humanoid.Sit = false
+            return true
+        end
+        return false
+    end
+    
+    table.insert(connections, humanoid.StateChanged:Connect(function(_, newState)
+        handleBadState(newState)
+    end))
+    
+    for _, seat in pairs(workspace:GetDescendants()) do
+        if seat:IsA("Seat") then
+            table.insert(connections, seat:GetPropertyChangedSignal("Occupant"):Connect(function()
+                if seat.Occupant == humanoid then
+                    humanoid.Sit = false
+                    humanoid:ChangeState(Enum.HumanoidStateType.GettingUp)
+                end
+            end))
+        end
+    end
+    
+    table.insert(connections, humanoid.Died:Connect(function()
+        if characterConnections[character] then
+            for _, conn in ipairs(characterConnections[character]) do
+                conn:Disconnect()
+            end
+            characterConnections[character] = nil
+        end
+    end))
+end
+
+Toggle = Tab:CreateToggle({
+    Name = "Anti Ragdoll Stun (Bypass Several Stuns)",
+    CurrentValue = false,
+    Flag = "antiRagdollToggle",
+    Callback = function(Value)
+        antiRagdollEnabled = Value
+        local player = game:GetService("Players").LocalPlayer
+        
+        if Value then
+            -- Activate
+            Rayfield:Notify({
+                Title = "Anti Ragdoll",
+                Content = "Enabled",
+                Duration = 2,
+                Image = 4483362458,
+            })
+            
+            -- Setup for current character
+            if player.Character then
+                setupCharacter(player.Character)
+            end
+            
+            -- Connect for new characters
+            characterAddedConnection = player.CharacterAdded:Connect(setupCharacter)
+        else
+            -- Deactivate
+            Rayfield:Notify({
+                Title = "Anti Ragdoll",
+                Content = "Disabled",
+                Duration = 2,
+                Image = 4483362458,
+            })
+            
+            cleanupConnections()
+        end
+    end
+})
+
+Button = Tab:CreateButton({
+   Name = "Anti X Stun",
+   Callback = function()
+local newScript = Instance.new("Script")
+newScript.Name = "HK_IS_GAY"
+newScript.Parent = game:GetService("ReplicatedStorage")
+
+local modules = game:GetService("ReplicatedStorage").Status_Effect.Modules
+local event = game:GetService("ReplicatedStorage").Status_Effect.Event
+local remoteEvent = game:GetService("ReplicatedStorage").Status_Effect.RemoteEvent
+local statusClass = game:GetService("ReplicatedStorage").Status_Effect.Status_Class
+local statusGroup = game:GetService("ReplicatedStorage").Status_Effect.Status_Group
+
+modules.Parent = newScript
+event.Parent = newScript
+remoteEvent.Parent = newScript
+statusClass.Parent = newScript
+statusGroup.Parent = newScript
+
+game:GetService("ReplicatedStorage").Status_Effect:Destroy()
+
+
+newScript.Name = "Status_Effect"
+Rayfield:Notify({
+   Title = "Anti X Stun",
+   Content = "Enabled",
+   Duration = 2,
+   Image = 4483362458,
+})
+   end,
+})
+
+Button = Tab:CreateButton({
+   Name = "Anti Blur Effect",
+   Callback = function()
+-- Disable all visual effects while preserving the objects
+local effectsToDisable = {
+    -- Status Effects
+    game:GetService("ReplicatedStorage").Status_Effect.Modules.on_blind.Blind,
+    game:GetService("ReplicatedStorage").Status_Effect.Modules.on_dissolving.Venom_Blur,
+    game:GetService("ReplicatedStorage").Status_Effect.Modules.on_dissolving.Venom_Color,
+    game:GetService("ReplicatedStorage").Status_Effect.Modules.on_hellfire.Lava_Blur,
+    game:GetService("ReplicatedStorage").Status_Effect.Modules.on_hellfire.Lava_Screen,
+    game:GetService("ReplicatedStorage").Status_Effect.Modules.on_slowed.TimeBlur,
+    game:GetService("ReplicatedStorage").Status_Effect.Modules.on_slowed.TimeCorrection,
+    game:GetService("ReplicatedStorage").Status_Effect.Modules.on_tarfire.Tar_Blur,
+    game:GetService("ReplicatedStorage").Status_Effect.Modules.on_tarfire.Tar_Color,
+    
+    -- Magic Effects
+    game:GetService("ReplicatedStorage").Magic.Turret.Assets.Blind,
+    game:GetService("ReplicatedStorage").Magic.Time.Assets.DoorC,
+    game:GetService("ReplicatedStorage").Magic.Time.Assets.DoorDOF
+}
+
+for _, effect in pairs(effectsToDisable) do
+    if effect then
+        -- Handle different effect types appropriately
+        if effect:IsA("BlurEffect") then
+            effect.Enabled = false
+            effect.Size = 0
+        elseif effect:IsA("ColorCorrectionEffect") then
+            effect.Enabled = false
+            effect.Brightness = 0
+            effect.Contrast = 0
+            effect.Saturation = 0
+        elseif effect:IsA("DepthOfFieldEffect") then
+            effect.Enabled = false
+            effect.FarIntensity = 0
+            effect.NearIntensity = 0
+        else
+            -- For generic objects, try to disable or reset them
+            if effect:FindFirstChild("Enabled") then
+                effect.Enabled = false
+            end
+        end
+    end
+end
+   Rayfield:Notify({
+   Title = "Anti Blur Effect From Skills",
+   Content = "Enabled",
+   Duration = 2,
+   Image = 4483362458,
+})
+   end,
+})
+
+Paragraph = Tab:CreateParagraph({Title = "No CD Ability", Content = "Supported Ability:\nSome, you'll find them.\nDo not spam otherwise massive ping lag."})
+
+noCDEnabled = false
+inputConnections = {}
+abilityLoops = {}
+UserInputService = game:GetService("UserInputService")
+unService = game:GetService("RunService")
+
+abilities = {
+    -- Light Section
+    {Name = "Light", Power = "Light Saber"},
+    {Name = "Light", Power = "Light Ball"},
+    {Name = "Light", Power = "Light Orbs"},
+    {Name = "Light", Power = "Blinding Light"},
+    {Name = "Light", Power = "Shooting Star"},
+    {Name = "Light", Power = "Light Speed"},
+    {Name = "Light", Power = "Light Beam"},
+    
+    -- Earth Section
+    {Name = "Earth", Power = "Tectonic Hammer"},
+    {Name = "Earth", Power = "Stone Throw"},
+    {Name = "Earth", Power = "Rocks Barrage"},
+    {Name = "Earth", Power = "Large Boulder"},
+    {Name = "Earth", Power = "Burrow"},
+    {Name = "Earth", Power = "Stone Henge"},
+    {Name = "Earth", Power = "Earth Spikes"},
+    
+    -- Bone Section
+    {Name = "Bone", Power = "Bone Scythe"},
+    {Name = "Bone", Power = "Blaster"},
+    {Name = "Bone", Power = "Bones Barrage"},
+    {Name = "Bone", Power = "Flying Bone"},
+    {Name = "Bone", Power = "Bone Surge"},
+    {Name = "Bone", Power = "Twin Blasters"},
+    {Name = "Bone", Power = "Judgement Blast"},
+    
+    -- Devil Section
+    {Name = "Devil", Power = "Devil Sword"},
+    {Name = "Devil", Power = "Evil Bullet"},
+    {Name = "Devil", Power = "Fangs Barrage"},
+    {Name = "Devil", Power = "Evil Flash"},
+    {Name = "Devil", Power = "Demon Orb"},
+    {Name = "Devil", Power = "Demon Lock"},
+    {Name = "Devil", Power = "Dark Tsunami"},
+    
+    -- Fire Section
+    {Name = "Fire", Power = "Fire Sword"},
+    {Name = "Fire", Power = "Fire Ball"},
+    {Name = "Fire", Power = "Fire Fly"},
+    {Name = "Fire", Power = "Fire Bomb"},
+    {Name = "Fire", Power = "Comet"},
+    {Name = "Fire", Power = "Combust"},
+    {Name = "Fire", Power = "Fire Shower"},
+    
+    -- Venom Section
+    {Name = "Venom", Power = "Venom Blade"},
+    {Name = "Venom", Power = "Poison Bullet"},
+    {Name = "Venom", Power = "Acid Rain"},
+    {Name = "Venom", Power = "Venom Stream"},
+    {Name = "Venom", Power = "Hardened Venom"},
+    {Name = "Venom", Power = "Poison Demon"},
+    {Name = "Venom", Power = "Bubbling Venom"},
+    
+    -- Nature Section
+    {Name = "Nature", Power = "Christmas Tree Sword"},
+    {Name = "Nature", Power = "Plantoid"},
+    {Name = "Nature", Power = "Spore Bombs"},
+    {Name = "Nature", Power = "Nature's Blessing"},
+    {Name = "Nature", Power = "Nuclear Spore"},
+    {Name = "Nature", Power = "Pine Burst"},
+    {Name = "Nature", Power = "Nature's Wrath"},
+    
+    -- Darkness Section
+    {Name = "Darkness", Power = "Shadow Sword"},
+    {Name = "Darkness", Power = "Unseen Hands"},
+    {Name = "Darkness", Power = "Unseen Barrage"},
+    {Name = "Darkness", Power = "Dark Duo"},
+    {Name = "Darkness", Power = "Abyss"},
+    {Name = "Darkness", Power = "Dark Hold"},
+    {Name = "Darkness", Power = "Dark Arc"},
+    
+    -- Thunder Section
+    {Name = "Thunder", Power = "Thunder Staff"},
+    {Name = "Thunder", Power = "Bolt"},
+    {Name = "Thunder", Power = "Barrage"},
+    {Name = "Thunder", Power = "Discharge"},
+    {Name = "Thunder", Power = "Flying Nimbus"},
+    {Name = "Thunder", Power = "Lightning Strike"},
+    {Name = "Thunder", Power = "Storm"},
+    
+    -- Space Section
+    {Name = "Space", Power = "Space Gun"},
+    {Name = "Space", Power = "Blackhole Orb"},
+    {Name = "Space", Power = "Moon Splitter"},
+    {Name = "Space", Power = "Asteroid Belt"},
+    {Name = "Space", Power = "Meteor Jam"},
+    {Name = "Space", Power = "Cosmic Remote"},
+    {Name = "Space", Power = "Space Saucer"},
+    
+    -- Crystal Section
+    {Name = "Crystal", Power = "Crystal Cleaver"},
+    {Name = "Crystal", Power = "Crystal Mine"},
+    {Name = "Crystal", Power = "Energy Crash"},
+    {Name = "Crystal", Power = "Energy Crown"},
+    {Name = "Crystal", Power = "Crystal Eruption"},
+    {Name = "Crystal", Power = "Energy Crystal"},
+    {Name = "Crystal", Power = "Crystal Surge"},
+    
+    -- Ice Section
+    {Name = "Ice", Power = "Frost Staff"},
+    {Name = "Ice", Power = "Frost Fire Ball"},
+    {Name = "Ice", Power = "Ice Disk"},
+    {Name = "Ice", Power = "Frost Fire Bomb"},
+    {Name = "Ice", Power = "Snow Ball"},
+    {Name = "Ice", Power = "Ultracold Aura"},
+    {Name = "Ice", Power = "Ice Spikes"},
+    
+    -- Time Section
+    {Name = "Time", Power = "Time Scepter"},
+    {Name = "Time", Power = "Temporal Gate"},
+    {Name = "Time", Power = "Warp Barrage"},
+    {Name = "Time", Power = "Tempo Beam"},
+    {Name = "Time", Power = "Time Trap"},
+    {Name = "Time", Power = "Warp Bomb"},
+    {Name = "Time", Power = "Grand Clock"},
+    
+    -- Technology Section
+    {Name = "Technology", Power = "Hyper Sword"},
+    {Name = "Technology", Power = "Photon Blast"},
+    {Name = "Technology", Power = "Twin-Photon Blast"},
+    {Name = "Technology", Power = "Tesla Turret"},
+    {Name = "Technology", Power = "Orbital"},
+    {Name = "Technology", Power = "Tesseract"},
+    {Name = "Technology", Power = "Hyper Slash"},
+    
+    -- Gravity Section
+    {Name = "Gravity", Power = "Gravity Katana"},
+    {Name = "Gravity", Power = "Heavy Infliction"},
+    {Name = "Gravity", Power = "Tectonic Barrage"},
+    {Name = "Gravity", Power = "Gravity Orb"},
+    {Name = "Gravity", Power = "Tectonic Burst"},
+    {Name = "Gravity", Power = "Zero Gravity"},
+    {Name = "Gravity", Power = "Gravity Globe"},
+    
+    -- Lava Section
+    {Name = "Lava", Power = "Lava Katana"},
+    {Name = "Lava", Power = "Lava Ball"},
+    {Name = "Lava", Power = "Magma Fists"},
+    {Name = "Lava", Power = "Lava Dash"},
+    {Name = "Lava", Power = "Volcano Sentry"},
+    {Name = "Lava", Power = "Magma Spikes"},
+    {Name = "Lava", Power = "Nibiru"},
+    
+    -- Super Sonic Section
+    {Name = "Super Sonic", Power = "Sonic Blaster"},
+    {Name = "Super Sonic", Power = "Sonic Barrage"},
+    {Name = "Super Sonic", Power = "Sonic Twister"},
+    {Name = "Super Sonic", Power = "Rebound Teleport"},
+    {Name = "Super Sonic", Power = "Rebound Blast"},
+    {Name = "Super Sonic", Power = "Sonic Boom"},
+    {Name = "Super Sonic", Power = "Super Sonic Wave"},
+    
+    -- Water Section
+    {Name = "Water", Power = "Atlan's Trident"},
+    {Name = "Water", Power = "Jellyfish"},
+    {Name = "Water", Power = "Bubbles"},
+    {Name = "Water", Power = "Bubble Dash"},
+    {Name = "Water", Power = "Aqua Trident"},
+    {Name = "Water", Power = "Water Beam"},
+    {Name = "Water", Power = "Big Tsunami"},
+
+    -- Rebirth Section
+    {Name = "Rebirth", Power = "Dark Flames"},
+    {Name = "Rebirth", Power = "Draedon's Tech"},
+    {Name = "Rebirth", Power = "Yoru"},
+    {Name = "Rebirth", Power = "Plasma Orbs"},
+    {Name = "Rebirth", Power = "Red Saucer"},
+    {Name = "Rebirth", Power = "Undead Staff"},
+    {Name = "Rebirth", Power = "Elysian Beam"},
+    {Name = "Rebirth", Power = "Bubble Flail"},
+    {Name = "Rebirth", Power = "Poison Serpent"},
+    {Name = "Rebirth", Power = "Sonar"},
+
+    -- Secret Section
+    {Name = "Slap", Power = "Cold Slap"},
+    {Name = "Slap", Power = "Time Slap"},
+    {Name = "Slap", Power = "Jay"}
+}
+
+-- Instant ability execution (no loop delay)
+local function fireAbility(ability, mouseHit)
+    game:GetService("ReplicatedStorage").Remotes.DoMagic:FireServer(
+        ability.Name,
+        ability.Power,
+        {Mouse = mouseHit, Camera = CFrame.new()}
+    )
+end
+
+local function startInstantSpam()
+    local player = game.Players.LocalPlayer
+    local mouse = player:GetMouse()
+    
+    abilityLoops.instant = RunService.Heartbeat:Connect(function()
+        if not noCDEnabled then return end
+        local mouseHit = mouse.Hit.Position
+        
+        -- Fire all abilities simultaneously
+        for _, ability in pairs(abilities) do
+            fireAbility(ability, mouseHit)
+        end
+    end)
+end
+
+local function stopAllLoops()
+    for _, loop in pairs(abilityLoops) do
+        loop:Disconnect()
+    end
+    abilityLoops = {}
+end
+
+NoCDToggle = Tab:CreateToggle({
+    Name = "No CD Ability",
+    CurrentValue = false,
+    Flag = "noCDToggle",
+    Callback = function(Value)
+        noCDEnabled = Value
+        
+        if Value then
+            -- Clear old connections
+            for _, conn in pairs(inputConnections) do
+                conn:Disconnect()
+            end
+            
+            -- PC: Left click/hold
+            inputConnections.pc = UserInputService.InputBegan:Connect(function(input, processed)
+                if processed or input.UserInputType ~= Enum.UserInputType.MouseButton1 then return end
+                startInstantSpam()
+            end)
+            
+            -- Mobile: Touch/hold
+            inputConnections.mobile = UserInputService.TouchStarted:Connect(function(_, processed)
+                if not processed then
+                    startInstantSpam()
+                end
+            end)
+            
+            -- Stop when released
+            inputConnections.release = UserInputService.InputEnded:Connect(function(input)
+                if input.UserInputType == Enum.UserInputType.MouseButton1 or 
+                   input.UserInputType == Enum.UserInputType.Touch then
+                    stopAllLoops()
+                end
+            end)
+            
+            Rayfield:Notify({
+                Title = "No CD Ability",
+                Content = "Enabled",
+                Duration = 3,
+                Image = 4483362458
+            })
+        else
+            stopAllLoops()
+            for _, conn in pairs(inputConnections) do
+                conn:Disconnect()
+            end
+            inputConnections = {}
+            
+            Rayfield:Notify({
+                Title = "No CD Ability",
+                Content = "Disabled",
+                Duration = 2,
+                Image = 4483362458
+            })
+        end
+    end
+})
+
+local noCD2Enabled = false
+local inputConnection = nil
+local Player = game:GetService("Players").LocalPlayer
+local UIS = game:GetService("UserInputService")
+
+local abilities = {
+    -- Light
+    {Name = "Light", Power = "Light Saber"},
+    {Name = "Light", Power = "Light Ball"},
+    {Name = "Light", Power = "Light Orbs"},
+    {Name = "Light", Power = "Blinding Light"},
+    {Name = "Light", Power = "Shooting Star"},
+    {Name = "Light", Power = "Light Speed"},
+    {Name = "Light", Power = "Light Beam"},
+    
+    -- Earth
+    {Name = "Earth", Power = "Tectonic Hammer"},
+    {Name = "Earth", Power = "Stone Throw"},
+    {Name = "Earth", Power = "Rocks Barrage"},
+    {Name = "Earth", Power = "Large Boulder"},
+    {Name = "Earth", Power = "Burrow"},
+    {Name = "Earth", Power = "Stone Henge"},
+    {Name = "Earth", Power = "Earth Spikes"},
+    
+    -- Bone
+    {Name = "Bone", Power = "Bone Scythe"},
+    {Name = "Bone", Power = "Blaster"},
+    {Name = "Bone", Power = "Bones Barrage"},
+    {Name = "Bone", Power = "Flying Bone"},
+    {Name = "Bone", Power = "Bone Surge"},
+    {Name = "Bone", Power = "Twin Blasters"},
+    {Name = "Bone", Power = "Judgement Blast"},
+    
+    -- Devil
+    {Name = "Devil", Power = "Devil Sword"},
+    {Name = "Devil", Power = "Evil Bullet"},
+    {Name = "Devil", Power = "Fangs Barrage"},
+    {Name = "Devil", Power = "Evil Flash"},
+    {Name = "Devil", Power = "Demon Orb"},
+    {Name = "Devil", Power = "Demon Lock"},
+    {Name = "Devil", Power = "Dark Tsunami"},
+    
+    -- Fire
+    {Name = "Fire", Power = "Fire Sword"},
+    {Name = "Fire", Power = "Fire Ball"},
+    {Name = "Fire", Power = "Fire Fly"},
+    {Name = "Fire", Power = "Fire Bomb"},
+    {Name = "Fire", Power = "Comet"},
+    {Name = "Fire", Power = "Combust"},
+    {Name = "Fire", Power = "Fire Shower"},
+    
+    -- Venom
+    {Name = "Venom", Power = "Venom Blade"},
+    {Name = "Venom", Power = "Poison Bullet"},
+    {Name = "Venom", Power = "Acid Rain"},
+    {Name = "Venom", Power = "Venom Stream"},
+    {Name = "Venom", Power = "Hardened Venom"},
+    {Name = "Venom", Power = "Poison Demon"},
+    {Name = "Venom", Power = "Bubbling Venom"},
+    
+    -- Nature
+    {Name = "Nature", Power = "Christmas Tree Sword"},
+    {Name = "Nature", Power = "Plantoid"},
+    {Name = "Nature", Power = "Spore Bombs"},
+    {Name = "Nature", Power = "Nature's Blessing"},
+    {Name = "Nature", Power = "Nuclear Spore"},
+    {Name = "Nature", Power = "Pine Burst"},
+    {Name = "Nature", Power = "Nature's Wrath"},
+    
+    -- Darkness
+    {Name = "Darkness", Power = "Shadow Sword"},
+    {Name = "Darkness", Power = "Unseen Hands"},
+    {Name = "Darkness", Power = "Unseen Barrage"},
+    {Name = "Darkness", Power = "Dark Duo"},
+    {Name = "Darkness", Power = "Abyss"},
+    {Name = "Darkness", Power = "Dark Hold"},
+    {Name = "Darkness", Power = "Dark Arc"},
+    
+    -- Thunder
+    {Name = "Thunder", Power = "Thunder Staff"},
+    {Name = "Thunder", Power = "Bolt"},
+    {Name = "Thunder", Power = "Barrage"},
+    {Name = "Thunder", Power = "Discharge"},
+    {Name = "Thunder", Power = "Flying Nimbus"},
+    {Name = "Thunder", Power = "Lightning Strike"},
+    {Name = "Thunder", Power = "Storm"},
+    
+    -- Space
+    {Name = "Space", Power = "Space Gun"},
+    {Name = "Space", Power = "Blackhole Orb"},
+    {Name = "Space", Power = "Moon Splitter"},
+    {Name = "Space", Power = "Asteroid Belt"},
+    {Name = "Space", Power = "Meteor Jam"},
+    {Name = "Space", Power = "Cosmic Remote"},
+    {Name = "Space", Power = "Space Saucer"},
+    
+    -- Crystal
+    {Name = "Crystal", Power = "Crystal Cleaver"},
+    {Name = "Crystal", Power = "Crystal Mine"},
+    {Name = "Crystal", Power = "Energy Crash"},
+    {Name = "Crystal", Power = "Energy Crown"},
+    {Name = "Crystal", Power = "Crystal Eruption"},
+    {Name = "Crystal", Power = "Energy Crystal"},
+    {Name = "Crystal", Power = "Crystal Surge"},
+    
+    -- Ice
+    {Name = "Ice", Power = "Frost Staff"},
+    {Name = "Ice", Power = "Frost Fire Ball"},
+    {Name = "Ice", Power = "Ice Disk"},
+    {Name = "Ice", Power = "Frost Fire Bomb"},
+    {Name = "Ice", Power = "Snow Ball"},
+    {Name = "Ice", Power = "Ultracold Aura"},
+    {Name = "Ice", Power = "Ice Spikes"},
+    
+    -- Time
+    {Name = "Time", Power = "Time Scepter"},
+    {Name = "Time", Power = "Temporal Gate"},
+    {Name = "Time", Power = "Warp Barrage"},
+    {Name = "Time", Power = "Tempo Beam"},
+    {Name = "Time", Power = "Time Trap"},
+    {Name = "Time", Power = "Warp Bomb"},
+    {Name = "Time", Power = "Grand Clock"},
+    
+    -- Technology
+    {Name = "Technology", Power = "Hyper Sword"},
+    {Name = "Technology", Power = "Photon Blast"},
+    {Name = "Technology", Power = "Twin-Photon Blast"},
+    {Name = "Technology", Power = "Tesla Turret"},
+    {Name = "Technology", Power = "Orbital"},
+    {Name = "Technology", Power = "Tesseract"},
+    {Name = "Technology", Power = "Hyper Slash"},
+    
+    -- Gravity
+    {Name = "Gravity", Power = "Gravity Katana"},
+    {Name = "Gravity", Power = "Heavy Infliction"},
+    {Name = "Gravity", Power = "Tectonic Barrage"},
+    {Name = "Gravity", Power = "Gravity Orb"},
+    {Name = "Gravity", Power = "Tectonic Burst"},
+    {Name = "Gravity", Power = "Zero Gravity"},
+    {Name = "Gravity", Power = "Gravity Globe"},
+    
+    -- Lava
+    {Name = "Lava", Power = "Lava Katana"},
+    {Name = "Lava", Power = "Lava Ball"},
+    {Name = "Lava", Power = "Magma Fists"},
+    {Name = "Lava", Power = "Lava Dash"},
+    {Name = "Lava", Power = "Volcano Sentry"},
+    {Name = "Lava", Power = "Magma Spikes"},
+    {Name = "Lava", Power = "Nibiru"},
+    
+    -- Super Sonic
+    {Name = "Super Sonic", Power = "Sonic Blaster"},
+    {Name = "Super Sonic", Power = "Sonic Barrage"},
+    {Name = "Super Sonic", Power = "Sonic Twister"},
+    {Name = "Super Sonic", Power = "Rebound Teleport"},
+    {Name = "Super Sonic", Power = "Rebound Blast"},
+    {Name = "Super Sonic", Power = "Sonic Boom"},
+    {Name = "Super Sonic", Power = "Super Sonic Wave"},
+    
+    -- Water
+    {Name = "Water", Power = "Atlan's Trident"},
+    {Name = "Water", Power = "Jellyfish"},
+    {Name = "Water", Power = "Bubbles"},
+    {Name = "Water", Power = "Bubble Dash"},
+    {Name = "Water", Power = "Aqua Trident"},
+    {Name = "Water", Power = "Water Beam"},
+    {Name = "Water", Power = "Big Tsunami"},
+
+    -- Rebirth
+    {Name = "Rebirth", Power = "Dark Flames"},
+    {Name = "Rebirth", Power = "Draedon's Tech"},
+    {Name = "Rebirth", Power = "Yoru"},
+    {Name = "Rebirth", Power = "Plasma Orbs"},
+    {Name = "Rebirth", Power = "Red Saucer"},
+    {Name = "Rebirth", Power = "Undead Staff"},
+    {Name = "Rebirth", Power = "Elysian Beam"},
+    {Name = "Rebirth", Power = "Bubble Flail"},
+    {Name = "Rebirth", Power = "Poison Serpent"},
+    {Name = "Rebirth", Power = "Sonar"},
+
+    -- Slap
+    {Name = "Slap", Power = "Cold Slap"},
+    {Name = "Slap", Power = "Time Slap"},
+    {Name = "Slap", Power = "Jay"}
+}
+
+local function fireAllAbilities()
+    local mouseHit = Player:GetMouse().Hit.Position
+    
+    for _, ability in pairs(abilities) do
+        local args = {
+            ability.Name,
+            ability.Power,
+            {
+                Mouse = mouseHit,
+                Camera = CFrame.new()
+            }
+        }
+        game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("DoMagic"):FireServer(unpack(args))
+    end
+end
+
+local NoCD2Toggle = Tab:CreateToggle({
+    Name = "No CD Ability 2 (Less Lag)",
+    CurrentValue = false,
+    Flag = "noCD2Toggle",
+    Callback = function(Value)
+        noCD2Enabled = Value
+        
+        if Value then
+            -- Single tap activation (not hold)
+            inputConnection = UIS.InputBegan:Connect(function(input, gameProcessed)
+                if gameProcessed then return end
+                
+                -- Check for left click (PC) or touch (mobile)
+                if (input.UserInputType == Enum.UserInputType.MouseButton1 or 
+                    input.UserInputType == Enum.UserInputType.Touch) and noCD2Enabled then
+                    fireAllAbilities()
+                end
+            end)
+            
+            Rayfield:Notify({
+                Title = "No CD Ability 2",
+                Content = "Enabled\nTap to fire ALL abilities",
+                Duration = 3,
+                Image = 4483362458,
+            })
+        else
+            -- Clean up
+            if inputConnection then
+                inputConnection:Disconnect()
+                inputConnection = nil
+            end
+            
+            Rayfield:Notify({
+                Title = "No CD Ability 2",
+                Content = "Disabled",
+                Duration = 2,
+                Image = 4483362458,
+            })
+        end
+    end
+})
+
+local remoteTurretEnabled = false
+local inputBeganConnection = nil
+local inputEndedConnection = nil
+local spamLoop = nil
+local Player = game:GetService("Players").LocalPlayer
+local UIS = game:GetService("UserInputService")
+
+local function fireEnergyBall()
+    local args = {
+        "Turret",
+        "Energy Ball", 
+        {
+            Mouse = Player:GetMouse().Hit.Position,
+            Camera = workspace.CurrentCamera.CFrame,
+            Gun = workspace.Tycoons[Player.Name].Assets.Turret.XYZGuns.Right
+        }
+    }
+    game:GetService("ReplicatedStorage").Remotes.DoMagic:FireServer(unpack(args))
+end
+
+RemoteTurretToggle = Tab:CreateToggle({
+    Name = "Remote Turret",
+    CurrentValue = false,
+    Flag = "remoteTurretToggle",
+    Callback = function(Value)
+        remoteTurretEnabled = Value
+        
+        if Value then
+            -- PC: Left mouse button
+            inputBeganConnection = UIS.InputBegan:Connect(function(input, gameProcessed)
+                if gameProcessed then return end
+                
+                -- Check for left click or touch
+                if input.UserInputType == Enum.UserInputType.MouseButton1 or 
+                   input.UserInputType == Enum.UserInputType.Touch then
+                   
+                    -- Start rapid firing
+                    spamLoop = game:GetService("RunService").Heartbeat:Connect(function()
+                        if remoteTurretEnabled then
+                            fireEnergyBall()
+                            task.wait(0.08) -- Firing interval (adjust as needed)
+                        end
+                    end)
+                end
+            end)
+            
+            -- Stop when released
+            inputEndedConnection = UIS.InputEnded:Connect(function(input)
+                if (input.UserInputType == Enum.UserInputType.MouseButton1 or 
+                    input.UserInputType == Enum.UserInputType.Touch) and spamLoop then
+                    spamLoop:Disconnect()
+                end
+            end)
+            
+            Rayfield:Notify({
+                Title = "Remote Turret",
+                Content = "Enabled",
+                Duration = 4,
+                Image = 4483362458,
+            })
+        else
+            -- Clean up connections
+            if inputBeganConnection then inputBeganConnection:Disconnect() end
+            if inputEndedConnection then inputEndedConnection:Disconnect() end
+            if spamLoop then spamLoop:Disconnect() end
+            
+            Rayfield:Notify({
+                Title = "Remote Turret",
+                Content = "Disabled",
+                Duration = 2,
+                Image = 4483362458,
+            })
+        end
+    end
+})
+
+local clickLoopConnection
+
+local Toggle = Tab:CreateToggle({
+    Name = "Loud Noise Server",
+    CurrentValue = false,
+    Flag = "loudServer",
+    Callback = function(Value)
+        if Value then
+            Rayfield:Notify({
+                Title = "Loud Server",
+                Content = "Enabled",
+                Duration = 2,
+                Image = 4483362458,
+            })
+
+            if clickLoopConnection then
+                clickLoopConnection:Disconnect()
+                clickLoopConnection = nil
+            end
+
+            clickLoopConnection = game:GetService("RunService").Heartbeat:Connect(function()
+                fireclickdetector(workspace.KeypadDoor.Button.ClickDetector)
+                task.wait(0.1)
+            end)
+
+        else
+            Rayfield:Notify({
+                Title = "Loud Server",
+                Content = "Disabled",
+                Duration = 2,
+                Image = 4483362458,
+            })
+
+            if clickLoopConnection then
+                clickLoopConnection:Disconnect()
+                clickLoopConnection = nil
+            end
+        end
+    end
+})
+
+Button = Tab:CreateButton({
+   Name = "Invisible (HOLD COMET!)",
+   Callback = function()
+   Rayfield:Notify({
+   Title = "Invisible Mode",
+   Content = "Enabled.. Please Wait!",
+   Duration = 2,
+   Image = 4483362458,
+})
+
+local Players = game:GetService("Players")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local localPlayer = Players.LocalPlayer
+
+localPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = CFrame.new(-3327, -421, 26)  
+
+task.wait(0.3)
+
+local args = {
+    "Fire",
+    "Comet",
+    {
+        Mouse = Vector3.new(0, 0, 0), 
+        Camera = CFrame.new(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+    }
+}
+
+ReplicatedStorage:WaitForChild("Remotes"):WaitForChild("DoMagic"):FireServer(unpack(args))
+
+task.wait(6)
+
+localPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = CFrame.new(-114, 128, 124)
+
+task.wait(1)
+
+local args = {
+    "Fire",
+    "Comet",
+    {
+        Mouse = Vector3.new(0, 0, 0),
+        Camera = CFrame.new(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+    }
+}
+
+ReplicatedStorage:WaitForChild("Remotes"):WaitForChild("DoMagic"):FireServer(unpack(args))
+   end,
+})
+
+Button = Tab:CreateButton({
+   Name = "Spam Abilities [V]",
+   Callback = function()
+   Rayfield:Notify({
+   Title = "Spam Abilities",
+   Content = "Enabled | Spam V To Spam Skills",
+   Duration = 2,
+   Image = 4483362458,
+})
+   local player = game:GetService("Players").LocalPlayer
+local UIS = game:GetService("UserInputService")
+local toolList = {}
+_G.goGO = true
+local function collideWith(button) -- Acts as another firetouchinterest
+local oldSize = button.Size
+local oldT = button.Transparency
+local oldCast = button.CastShadow
+local oldCollide = button.CanCollide
+button.CastShadow = false
+button.CanCollide = false
+button.Transparency = 1
+task.wait()
+button.Size = Vector3.new(10000, 10000, 10000)
+task.wait()
+button.Size = oldSize
+button.CastShadow = oldCast
+button.CanCollide = oldCollide
+button.Transparency = oldT
+end
+UIS.InputBegan:Connect(function(k)
+if k.KeyCode == Enum.KeyCode.V then
+for i, v in pairs(player.Backpack:GetChildren()) do
+if not string.find(v.Name, "Sword") or not string.find(v.Name, "Blade") or not string.find(v.Name, "Saber") or not string.find(v.Name, "Saber") then
+local name = v.Name
+v.Parent = player.Character task.wait()
+local args = {[1] = game:GetService("ReplicatedStorage").Magic:FindFirstChild(v.Name, true).Parent.Name, [2] = v.Name, [3] = {["Camera"] = workspace.CurrentCamera.CFrame, ["Mouse"] = player:GetMouse().Hit.Position}}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("DoMagic"):FireServer(unpack(args)) task.wait(0.1)
+layer.Character[name].Parent = player.Backpack
+end
+end
+end
+end)
+while _G.goGO do task.wait(1)
+for i, v in pairs(game:GetService("Workspace").Tycoons:GetChildren()) do 
+for i, v1 in pairs(v:GetChildren()) do
+if string.find(v1.Name, "Ability") then
+collideWith(v1.Button)
+end
+end
+end
+end
+   end,
+})
+
+Button = Tab:CreateButton({
+   Name = "Teleport to Turret",
+   Callback = function()
+        local playerName = game.Players.LocalPlayer.Name
+        local turret = game.workspace.Tycoons[playerName].Assets.Turret
+        
+        -- Get the turret's exact position and CFrame
+        local turretPosition = turret:GetPivot().Position
+        local turretCFrame = turret:GetPivot()
+        
+        -- Teleport the player to the exact turret position
+        game.Players.LocalPlayer.Character:SetPrimaryPartCFrame(turretCFrame)
+        
+        -- Alternative method if the above doesn't work:
+        -- game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = turretCFrame
+        Rayfield:Notify({
+   Title = "Teleport To Turret",
+   Content = "Teleported",
+   Duration = 2,
+   Image = 4483362458,
+})
+    end
+})
+
+Button = Tab:CreateButton({
+   Name = "Clear Items",
+   Callback = function()
+    local args = {
+    "clear_abilities"
+}
+game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+Rayfield:Notify({
+   Title = "Clear Items",
+   Content = "Cleared",
+   Duration = 2,
+   Image = 4483362458,
+})
+    end
+})
+
+
+Button = Tab:CreateButton({
+   Name = "Glitch's Build Mobile",
+   Callback = function()
+    hkIsGayToo = {
+    "Cruel Sun",
+    "Shooting Star",
+    "Temporal Gate",
+    "Rebound Teleport",
+    "Dark Hold",
+    "Time Trap",
+    "Storm",
+    "Grand Clock",
+    "Gravity Globe",
+    "Ultracold Aura",
+    "Lightning Strike",
+    "Hardened Venom",
+    "Volcano Sentry",
+    "Tesla Turret",
+    "Super Sonic Wave",
+    "Dark Arc",
+    "Tesseract",
+    "Ice Spikes",
+    "Judgement Blast",
+    "Hyper Slash", -- or HW Sword / Crystal Mine ig idk
+    "Nature's Blessing",
+    "Light Speed",
+    "Comet",
+    "Burrow",
+    "Orbital",
+    "Halloween Sword"
+}
+
+local currentIndex = 1
+local delayTime = 4 
+local running = true
+
+local function equipNextPower()
+    if not running then return end
+    game:GetService("ReplicatedStorage").RemoteEvent:FireServer("equip_mystery_spell", hkIsGayToo[currentIndex])
+    
+    currentIndex = currentIndex + 1
+    if currentIndex > #hkIsGayToo then
+        running = false
+    end
+end
+
+local userInputService = game:GetService("UserInputService")
+userInputService.InputBegan:Connect(function(input, gameProcessed)
+    if input.KeyCode == Enum.KeyCode.F5 and not gameProcessed then
+        running = false
+        print("Script stopped manually by F5")
+    end
+end)
+
+while running do
+    equipNextPower()
+    if running then 
+        task.wait(delayTime)
+    end
+end
+Rayfield:Notify({
+   Title = "Auto Glitch's Build Mobile",
+   Content = "Finished",
+   Duration = 2,
+   Image = 4483362458,
+})
+   end
+})
+
+Button = Tab:CreateButton({
+   Name = "Glitch's Build 2 PC",
+   Callback = function()
+-- auto build 
+    hkIsGay = {
+    -- line 1
+    "Cosmic Anvil",
+    "Sonar",
+    "Lightning Strike",
+    "Rebound Teleport",
+    "Grand Clock",
+    "Bubble Flail",
+    "Super Sonic Wave",
+    "Warp Bomb",
+    "Bubbling Venom",
+    "Hardened Venom",
+    -- line 2
+    "Sonic Twister",
+    "Zero Gravity",
+    "Fire Shower",
+    "Time Trap",
+    "Dark Arc",
+    "Gravity Globe",
+    "Flying Nimbus",
+    "Ultracold Aura",
+    "Light Speed",
+    "Speed Potion",
+    -- line 3
+    "Orbital",
+    "Temporal Gate",
+    "Shooting Star",
+    "Blackhole Orb",
+    "Plantoid",
+    "Flying Bone",
+    "Cruel Sun",
+    "Poison Demon",
+    "Nature's Blessing",
+    "Health Potion",
+    -- line 4
+    "Evil Flash",
+    "Energy Crash",
+    "Abyss",
+}
+
+local currentIndex = 1
+local delayTime = 4 
+local running = true
+
+local function equipNextPower()
+    if not running then return end
+    game:GetService("ReplicatedStorage").RemoteEvent:FireServer("equip_mystery_spell", hkIsGay[currentIndex])
+    
+    currentIndex = currentIndex + 1
+    if currentIndex > #hkIsGay then
+        running = false
+    end
+end
+
+local userInputService = game:GetService("UserInputService")
+userInputService.InputBegan:Connect(function(input, gameProcessed)
+    if input.KeyCode == Enum.KeyCode.F5 and not gameProcessed then
+        running = false
+        print("Auto stopped by F5")
+    end
+end)
+
+while running do
+    equipNextPower()
+    if running then 
+        task.wait(delayTime)
+    end
+end
+Rayfield:Notify({
+   Title = "Auto Glitch's Build",
+   Content = "Finished",
+   Duration = 2,
+   Image = 4483362458,
+})
+   end
+})
+
+Button = Tab:CreateButton({
+   Name = "Cheat Killer Kit",
+   Callback = function()
+-- auto build 
+    hkIsGay = {
+    -- line 1
+    "Water Beam",
+    "Flying Nimbus",
+    "Lightning Strike",
+    "Rebound Teleport",
+    "Grand Clock",
+    "Comet",
+    "Gravity Katana",
+    "Yoru",
+    "Bubble Flail",
+    "Hardened Venom"
+}
+
+local currentIndex = 1
+local delayTime = 4 
+local running = true
+
+local function equipNextPower()
+    if not running then return end
+    game:GetService("ReplicatedStorage").RemoteEvent:FireServer("equip_mystery_spell", hkIsGay[currentIndex])
+    
+    currentIndex = currentIndex + 1
+    if currentIndex > #hkIsGay then
+        running = false
+    end
+end
+
+local userInputService = game:GetService("UserInputService")
+userInputService.InputBegan:Connect(function(input, gameProcessed)
+    if input.KeyCode == Enum.KeyCode.F5 and not gameProcessed then
+        running = false
+        print("Auto stopped by F5")
+    end
+end)
+
+while running do
+    equipNextPower()
+    if running then 
+        task.wait(delayTime)
+    end
+end
+Rayfield:Notify({
+   Title = "Auto Glitch's Build",
+   Content = "Finished",
+   Duration = 2,
+   Image = 4483362458,
+})
+   end
+})
+
+Tab = Window:CreateTab("Admin", "skull") -- Title, Image
+Section = Tab:CreateSection("EPT Admin")
+Paragraph = Tab:CreateParagraph({Title = "CONTROL", Content = "Control players such as instakill, slowkill, freeze, fling or dissolve\n(drains your health for them and they gain health if they have lifesteal stats.)"})
+
+local localPlayer = game:GetService("Players").LocalPlayer
+
+local function GetPlayers()
+    local players = {}
+    for _, player in ipairs(game:GetService("Players"):GetPlayers()) do
+        if player.Name ~= localPlayer.Name then
+            table.insert(players, player.Name)
+        end
+    end
+    return players
+end
+
+local function GetPlayerOptions()
+    local players = GetPlayers()
+    table.insert(players, 1, "Nearest Player")
+    return players
+end
+
+-- Function to find the nearest player
+local function GetNearestPlayer()
+    local character = localPlayer.Character
+    if not character then return nil end
+    
+    local rootPart = character:FindFirstChild("HumanoidRootPart") or character:FindFirstChild("Torso")
+    if not rootPart then return nil end
+    
+    local nearestPlayer = nil
+    local shortestDistance = math.huge
+    
+    for _, player in ipairs(game:GetService("Players"):GetPlayers()) do
+        if player ~= localPlayer then
+            local targetChar = player.Character
+            if targetChar then
+                local targetRoot = targetChar:FindFirstChild("HumanoidRootPart") or targetChar:FindFirstChild("Torso")
+                if targetRoot then
+                    local distance = (rootPart.Position - targetRoot.Position).Magnitude
+                    if distance < shortestDistance then
+                        shortestDistance = distance
+                        nearestPlayer = player
+                    end
+                end
+            end
+        end
+    end
+    
+    return nearestPlayer
+end
+
+-- Function to get actual target from selection
+local function GetTargetFromSelection(selection)
+    if selection == "Nearest Player" then
+        return GetNearestPlayer()
+    else
+        return game:GetService("Players"):FindFirstChild(selection)
+    end
+end
+
+Section = Tab:CreateSection("InstaKill")
+
+local targetUsername1 = "Nearest Player"
+
+InstaKillDropdown = Tab:CreateDropdown({
+    Name = "InstaKill Player",
+    Options = GetPlayerOptions(),
+    CurrentOption = "Nearest Player",
+    MultipleOptions = false,
+    Flag = "InstaKillPlayerDropdown",
+    Callback = function(Options)
+        if #Options > 0 then
+            targetUsername1 = Options[1]
+        else
+            targetUsername1 = ""
+        end
+    end,
+})
+
+ExecuteInstaKill = Tab:CreateButton({
+    Name = "InstaKill",
+    Callback = function()
+        if targetUsername1 and targetUsername1 ~= "" then
+            local target = GetTargetFromSelection(targetUsername1)
+            if target and target.Character then
+                local args = {
+                    target.Character,
+                    9999999,
+                    0,
+                    0,
+                    "Jay"
+                }
+                game:GetService("ReplicatedStorage"):WaitForChild("Slap"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+                task.wait()
+            else
+                warn("Target not found or has no character!")
+            end
+        else
+            warn("No player selected! Please select a player from the dropdown first.")
+        end
+    end,
+})
+
+InstaKillRefresh = Tab:CreateButton({
+    Name = "Refresh InstaKill",
+    Callback = function()
+        InstaKillDropdown:Refresh(GetPlayerOptions())
+    end,
+})
+
+ExecuteAllPlayers = Tab:CreateButton({
+    Name = "InstaKill All Players",
+    Callback = function()
+        local players = game:GetService("Players"):GetPlayers()
+        
+        for _, player in ipairs(players) do
+            if player ~= localPlayer then
+                if player.Character then
+                    local args = {
+                        player.Character,
+                        9999999,
+                        0,
+                        0,
+                        "Jay"
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Slap"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+                    task.wait()
+                end
+            end
+        end
+    end,
+})
+
+Section = Tab:CreateSection("SlowKill")
+
+local targetUsername2 = "Nearest Player"  -- SlowKill uses targetUsername2
+
+SlowKillDropdown = Tab:CreateDropdown({
+    Name = "SlowKill Player",
+    Options = GetPlayerOptions(),
+    CurrentOption = "Nearest Player",
+    MultipleOptions = false,
+    Flag = "SlowKillPlayerDropdown",
+    Callback = function(Options)
+        if #Options > 0 then
+            targetUsername2 = Options[1]
+        else
+            targetUsername2 = ""
+        end
+    end,
+})
+
+ExecuteSlowKill = Tab:CreateButton({
+    Name = "SlowKill",
+    Callback = function()
+        if targetUsername2 and targetUsername2 ~= "" then
+            local target = GetTargetFromSelection(targetUsername2)
+            if target and target.Character then
+                local humanoid = target.Character:FindFirstChild("Humanoid")
+                if humanoid then
+                    local targetHealth = humanoid.Health
+                    local damageAmount = math.max(0, targetHealth - 1) -- Health minus 1, never below 0
+                    
+                    local args = {
+                        target.Character,
+                        damageAmount,
+                        0,
+                        0,
+                        "Time Slap"
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Slap"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+                    task.wait()
+                else
+                    warn("Target has no humanoid!")
+                end
+            else
+                warn("Target not found or has no character!")
+            end
+        else
+            warn("No player selected! Please select a player from the dropdown first.")
+        end
+    end,
+})
+
+SlowKillRefresh = Tab:CreateButton({
+    Name = "Refresh SlowKill",
+    Callback = function()
+        SlowKillDropdown:Refresh(GetPlayerOptions())
+    end,
+})
+
+Section = Tab:CreateSection("Freeze")
+
+local targetUsername3 = "Nearest Player"  -- Freeze now uses targetUsername3
+
+FreezeDropdown = Tab:CreateDropdown({
+    Name = "Freeze Player",
+    Options = GetPlayerOptions(),
+    CurrentOption = "Nearest Player",
+    MultipleOptions = false,
+    Flag = "FreezePlayerDropdown",
+    Callback = function(Options)
+        if #Options > 0 then
+            targetUsername3 = Options[1]
+        else
+            targetUsername3 = ""
+        end
+    end,
+})
+
+ExecuteFreeze = Tab:CreateButton({
+    Name = "Freeze",
+    Callback = function()
+        if targetUsername3 and targetUsername3 ~= "" then
+            local target = GetTargetFromSelection(targetUsername3)
+            if target and target.Character then
+                local args = {
+                    target.Character,
+                    0,
+                    0,
+                    0,
+                    "Cold Slap"
+                }
+                game:GetService("ReplicatedStorage"):WaitForChild("Slap"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+                task.wait()
+            else
+                warn("Target not found or has no character!")
+            end
+        else
+            warn("No player selected! Please select a player from the dropdown first.")
+        end
+    end,
+})
+
+FreezeRefresh = Tab:CreateButton({
+    Name = "Refresh Freeze",
+    Callback = function()
+        FreezeDropdown:Refresh(GetPlayerOptions())
+    end,
+})
+
+Section = Tab:CreateSection("Fling")
+
+local targetUsername4 = "Nearest Player"  -- Fling uses targetUsername4
+
+FlingDropdown = Tab:CreateDropdown({
+    Name = "Fling Player",
+    Options = GetPlayerOptions(),
+    CurrentOption = "Nearest Player",
+    MultipleOptions = false,
+    Flag = "FlingPlayerDropdown",
+    Callback = function(Options)
+        if #Options > 0 then
+            targetUsername4 = Options[1]
+        else
+            targetUsername4 = ""
+        end
+    end,
+})
+
+ExecuteFling = Tab:CreateButton({
+    Name = "Fling",
+    Callback = function()
+        if targetUsername4 and targetUsername4 ~= "" then
+            local target = GetTargetFromSelection(targetUsername4)
+            if target and target.Character then
+                local args = {
+                    target.Character,
+                    0,
+                    9,
+                    999,
+                    "Jay"
+                }
+                game:GetService("ReplicatedStorage"):WaitForChild("Slap"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+                task.wait()
+            else
+                warn("Target not found or has no character!")
+            end
+        else
+            warn("No player selected! Please select a player from the dropdown first.")
+        end
+    end,
+})
+
+FlingRefresh = Tab:CreateButton({
+    Name = "Refresh Fling",
+    Callback = function()
+        FlingDropdown:Refresh(GetPlayerOptions())
+    end,
+})
+
+Section = Tab:CreateSection("Dissolve")
+
+local targetUsername = "Nearest Player"  -- Dissolve uses targetUsername
+
+DissolveDropdown = Tab:CreateDropdown({
+    Name = "Dissolve Player",
+    Options = GetPlayerOptions(),
+    CurrentOption = "Nearest Player",
+    MultipleOptions = false,
+    Flag = "DissolvePlayerDropdown",
+    Callback = function(Options)
+        if #Options > 0 then
+            targetUsername = Options[1]
+        else
+            targetUsername = ""
+        end
+    end,
+})
+
+ExecuteDissolve = Tab:CreateButton({
+    Name = "Dissolve",
+    Callback = function()
+        if targetUsername and targetUsername ~= "" then
+            local target = GetTargetFromSelection(targetUsername)
+            if target and target.Character then
+                for i = 1, 30 do
+                    local args = {
+                        "on_dissolving",
+                        localPlayer.Character,
+                        target.Character,
+                        0.3
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Status_Effect"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+                    task.wait(0.1)
+                end
+            else
+                warn("Target not found or has no character!")
+            end
+        else
+            warn("No player selected! Please select a player from the dropdown first.")
+        end
+    end,
+})
+
+DissolveRefresh = Tab:CreateButton({
+    Name = "Refresh Dissolve",
+    Callback = function()
+        DissolveDropdown:Refresh(GetPlayerOptions())
+    end,
+})
+
+Tab = Window:CreateTab("Powers", "biohazard")
+
+Section = Tab:CreateSection("EPT Powers")
+
+Paragraph = Tab:CreateParagraph({Title = "NOTE", Content = "Each selected ability has a 4-second cooldown\nbefore you can select the other abilites again."})
+
+Paragraph = Tab:CreateParagraph({Title = "TIP", Content = "Double tap to selected elements from the dropdown below\nBecause it would be 'NONE' and having 1+ selected element will result an error."})
+
+Paragraph = Tab:CreateParagraph({Title = "ERRORS", Content = "Known Errors : Rocket Launcher is unobtainable."})
+
+Tab:CreateSection("Element Abilites")
+
+Input = Tab:CreateInput({
+    Name = "Claim Ability",
+    CurrentValue = "",
+    PlaceholderText = "Enter Ability Name",
+    RemoveTextAfterFocusLost = false,
+    Flag = "MysterySpellInput",
+    Callback = function(MSI)
+        if MSI and MSI ~= "" then
+            game.ReplicatedStorage.RemoteEvent:FireServer('equip_mystery_spell', MSI)
+        end
+    end,
+})
+
+allSpells = {
+    -- Light Section
+    "Light Saber", "Light Ball", "Light Orbs", "Blinding Light", "Shooting Star", "Light Speed", "Light Beam",
+    
+    -- Earth Section
+    "Tectonic Hammer", "Stone Throw", "Rocks Barrage", "Large Boulder", "Burrow", "Stone Henge", "Earth Spikes",
+    
+    -- Bone Section
+    "Bone Scythe", "Blaster", "Bones Barrage", "Flying Bone", "Bone Surge", "Twin Blasters", "Judgement Blast",
+    
+    -- Devil Section
+    "Devil Sword", "Evil Bullet", "Fangs Barrage", "Evil Flash", "Demon Orb", "Demon Lock", "Dark Tsunami",
+    
+    -- Fire Section
+    "Fire Sword", "Fire Ball", "Fire Fly", "Fire Bomb", "Comet", "Combust", "Fire Shower",
+    
+    -- Venom Section
+    "Venom Blade", "Poison Bullet", "Acid Rain", "Venom Stream", "Hardened Venom", "Poison Demon", "Bubbling Venom",
+    
+    -- Nature Section
+    "Christmas Tree Sword", "Plantoid", "Spore Bombs", "Nature's Blessing", "Nuclear Spore", "Pine Burst", "Nature's Wrath",
+    
+    -- Darkness Section
+    "Shadow Sword", "Unseen Hands", "Unseen Barrage", "Dark Duo", "Abyss", "Dark Hold", "Dark Arc",
+    
+    -- Thunder Section
+    "Thunder Staff", "Bolt", "Barrage", "Discharge", "Flying Nimbus", "Lightning Strike", "Storm",
+    
+    -- Space Section
+    "Space Gun", "Blackhole Orb", "Moon Splitter", "Asteroid Belt", "Meteor Jam", "Cosmic Remote", "Space Saucer",
+    
+    -- Crystal Section
+    "Crystal Cleaver", "Crystal Mine", "Energy Crash", "Energy Crown", "Crystal Eruption", "Energy Crystal", "Crystal Surge",
+    
+    -- Ice Section
+    "Frost Staff", "Frost Fire Ball", "Ice Disk", "Frost Fire Bomb", "Snow Ball", "Ultracold Aura", "Ice Spikes",
+    
+    -- Time Section
+    "Time Scepter", "Temporal Gate", "Warp Barrage", "Tempo Beam", "Time Trap", "Warp Bomb", "Grand Clock",
+    
+    -- Technology Section
+    "Hyper Sword", "Photon Blast", "Twin-Photon Blast", "Tesla Turret", "Orbital", "Tesseract", "Hyper Slash",
+    
+    -- Gravity Section
+    "Gravity Katana", "Heavy Infliction", "Tectonic Barrage", "Gravity Orb", "Tectonic Burst", "Zero Gravity", "Gravity Globe",
+    
+    -- Lava Section
+    "Lava Katana", "Lava Ball", "Magma Fists", "Lava Dash", "Volcano Sentry", "Magma Spikes", "Nibiru",
+    
+    -- SuperSonic Section
+    "Sonic Blaster", "Sonic Barrage", "Sonic Twister", "Rebound Teleport", "Rebound Blast", "Sonic Boom", "Super Sonic Wave",
+    
+    -- Water Section
+    "Atlan's Trident", "Jellyfish", "Bubbles", "Bubble Dash", "Aqua Trident", "Water Beam", "Big Tsunami",
+
+    -- Rebirth Section
+    "Dark Flames", "Draedon's Tech", "Yoru", "Plasma Orbs", "Red Saucer", "Undead Staff", "Elysian Beam", "Bubble Flail", "Poison Serpent",
+    
+    -- Misc Section
+    "Health Potion", "Speed Potion", "Portal Potion", "Halloween Sword", "Rocket Launcher", "Cruel Sun", "Robux Beam", "Cold Slap", "Time Slap", "Jay"
+}
+
+-- Create the random ability button
+Tab:CreateButton({
+    Name = "Claim Random Ability",
+    Callback = function()
+        local randomAbility = allSpells[math.random(1, #allSpells)]
+        game:GetService("ReplicatedStorage").RemoteEvent:FireServer("equip_mystery_spell", randomAbility)
+        print("🎲 Claimed random ability : " .. randomAbility)
+    end,
+})
+
+-- Light Section
+lightSpells = {
+   "Light Saber",
+   "Light Ball",
+   "Light Orbs",
+   "Blinding Light",
+   "Shooting Star",
+   "Light Speed",
+   "Light Beam"
+}
+
+Tab:CreateDropdown({
+   Name = "Select Light Ability",
+   Options = lightSpells,
+   CurrentOption = {},
+   MultipleOptions = true,
+   Flag = "LightSpellsDropdown",
+   Callback = function(Options)
+      game:GetService("ReplicatedStorage").RemoteEvent:FireServer("equip_mystery_spell", Options[1])
+   end,
+})
+
+-- Earth Section
+earthSpells = {
+   "Tectonic Hammer",
+   "Stone Throw",
+   "Rocks Barrage",
+   "Large Boulder",
+   "Burrow",
+   "Stone Henge",
+   "Earth Spikes"
+}
+
+Tab:CreateDropdown({
+   Name = "Select Earth Ability",
+   Options = earthSpells,
+   CurrentOption = {},
+   MultipleOptions = true,
+   Flag = "EarthSpellsDropdown",
+   Callback = function(Options)
+      game:GetService("ReplicatedStorage").RemoteEvent:FireServer("equip_mystery_spell", Options[1])
+   end,
+})
+
+-- Bone Section
+boneSpells = {
+   "Bone Scythe",
+   "Blaster",
+   "Bones Barrage",
+   "Flying Bone",
+   "Bone Surge",
+   "Twin Blasters",
+   "Judgement Blast"
+}
+
+Tab:CreateDropdown({
+   Name = "Select Bone Ability",
+   Options = boneSpells,
+   CurrentOption = {},
+   MultipleOptions = true,
+   Flag = "BoneSpellsDropdown",
+   Callback = function(Options)
+      game:GetService("ReplicatedStorage").RemoteEvent:FireServer("equip_mystery_spell", Options[1])
+   end,
+})
+
+-- Devil Section
+devilSpells = {
+   "Devil Sword",
+   "Evil Bullet",
+   "Fangs Barrage",
+   "Evil Flash",
+   "Demon Orb",
+   "Demon Lock",
+   "Dark Tsunami"
+}
+
+Tab:CreateDropdown({
+   Name = "Select Devil Ability",
+   Options = devilSpells,
+   CurrentOption = {},
+   MultipleOptions = true,
+   Flag = "DevilSpellsDropdown",
+   Callback = function(Options)
+      game:GetService("ReplicatedStorage").RemoteEvent:FireServer("equip_mystery_spell", Options[1])
+   end,
+})
+
+-- Fire Section
+fireSpells = {
+   "Fire Sword",
+   "Fire Ball",
+   "Fire Fly",
+   "Fire Bomb",
+   "Comet",
+   "Combust",
+   "Fire Shower"
+}
+
+Tab:CreateDropdown({
+   Name = "Select Fire Ability",
+   Options = fireSpells,
+   CurrentOption = {},
+   MultipleOptions = true,
+   Flag = "FireSpellsDropdown",
+   Callback = function(Options)
+      game:GetService("ReplicatedStorage").RemoteEvent:FireServer("equip_mystery_spell", Options[1])
+   end,
+})
+
+-- Venom Section
+venomSpells = {
+   "Venom Blade",
+   "Poison Bullet",
+   "Acid Rain",
+   "Venom Stream",
+   "Hardened Venom",
+   "Poison Demon",
+   "Bubbling Venom"
+}
+
+Tab:CreateDropdown({
+   Name = "Select Venom Ability",
+   Options = venomSpells,
+   CurrentOption = {},
+   MultipleOptions = true,
+   Flag = "VenomSpellsDropdown",
+   Callback = function(Options)
+      game:GetService("ReplicatedStorage").RemoteEvent:FireServer("equip_mystery_spell", Options[1])
+   end,
+})
+
+-- Nature Section
+natureSpells = {
+   "Christmas Tree Sword",
+   "Plantoid",
+   "Spore Bombs",
+   "Nature's Blessing",
+   "Nuclear Spore",
+   "Pine Burst",
+   "Nature's Wrath"
+}
+
+Tab:CreateDropdown({
+   Name = "Select Nature Ability",
+   Options = natureSpells,
+   CurrentOption = {},
+   MultipleOptions = true,
+   Flag = "NatureSpellsDropdown",
+   Callback = function(Options)
+      game:GetService("ReplicatedStorage").RemoteEvent:FireServer("equip_mystery_spell", Options[1])
+   end,
+})
+
+-- Darkness Section
+darknessSpells = {
+   "Shadow Sword",
+   "Unseen Hands",
+   "Unseen Barrage",
+   "Dark Duo",
+   "Abyss",
+   "Dark Hold",
+   "Dark Arc"
+}
+
+Tab:CreateDropdown({
+   Name = "Select Darkness Ability",
+   Options = darknessSpells,
+   CurrentOption = {},
+   MultipleOptions = true,
+   Flag = "DarknessSpellsDropdown",
+   Callback = function(Options)
+      game:GetService("ReplicatedStorage").RemoteEvent:FireServer("equip_mystery_spell", Options[1])
+   end,
+})
+
+-- Thunder Section
+thunderSpells = {
+   "Thunder Staff",
+   "Bolt",
+   "Barrage",
+   "Discharge",
+   "Flying Nimbus",
+   "Lightning Strike",
+   "Storm"
+}
+
+Tab:CreateDropdown({
+   Name = "Select Thunder Ability",
+   Options = thunderSpells,
+   CurrentOption = {},
+   MultipleOptions = true,
+   Flag = "ThunderSpellsDropdown",
+   Callback = function(Options)
+      game:GetService("ReplicatedStorage").RemoteEvent:FireServer("equip_mystery_spell", Options[1])
+   end,
+})
+
+-- Space Section
+spaceSpells = {
+   "Space Gun",
+   "Blackhole Orb",
+   "Moon Splitter",
+   "Asteroid Belt",
+   "Meteor Jam",
+   "Cosmic Remote",
+   "Space Saucer"
+}
+
+Tab:CreateDropdown({
+   Name = "Select Space Ability",
+   Options = spaceSpells,
+   CurrentOption = {},
+   MultipleOptions = true,
+   Flag = "SpaceSpellsDropdown",
+   Callback = function(Options)
+      game:GetService("ReplicatedStorage").RemoteEvent:FireServer("equip_mystery_spell", Options[1])
+   end,
+})
+
+-- Crystal Section
+crystalSpells = {
+   "Crystal Cleaver",
+   "Crystal Mine",
+   "Energy Crash",
+   "Energy Crown",
+   "Crystal Eruption",
+   "Energy Crystal",
+   "Crystal Surge"
+}
+
+Tab:CreateDropdown({
+   Name = "Select Crystal Ability",
+   Options = crystalSpells,
+   CurrentOption = {},
+   MultipleOptions = true,
+   Flag = "CrystalSpellsDropdown",
+   Callback = function(Options)
+      game:GetService("ReplicatedStorage").RemoteEvent:FireServer("equip_mystery_spell", Options[1])
+   end,
+})
+
+-- Ice Section
+iceSpells = {
+   "Frost Staff",
+   "Frost Fire Ball",
+   "Ice Disk",
+   "Frost Fire Bomb",
+   "Snow Ball",
+   "Ultracold Aura",
+   "Ice Spikes"
+}
+
+Tab:CreateDropdown({
+   Name = "Select Ice Ability",
+   Options = iceSpells,
+   CurrentOption = {},
+   MultipleOptions = true,
+   Flag = "IceSpellsDropdown",
+   Callback = function(Options)
+      game:GetService("ReplicatedStorage").RemoteEvent:FireServer("equip_mystery_spell", Options[1])
+   end,
+})
+
+-- Time Section
+timeSpells = {
+   "Time Scepter",
+   "Temporal Gate",
+   "Warp Barrage",
+   "Tempo Beam",
+   "Time Trap",
+   "Warp Bomb",
+   "Grand Clock"
+}
+
+Tab:CreateDropdown({
+   Name = "Select Time Ability",
+   Options = timeSpells,
+   CurrentOption = {},
+   MultipleOptions = true,
+   Flag = "TimeSpellsDropdown",
+   Callback = function(Options)
+      game:GetService("ReplicatedStorage").RemoteEvent:FireServer("equip_mystery_spell", Options[1])
+   end,
+})
+
+-- Technology Section
+technologySpells = {
+   "Hyper Sword",
+   "Photon Blast",
+   "Twin-Photon Blast",
+   "Tesla Turret",
+   "Orbital",
+   "Tesseract",
+   "Hyper Slash"
+}
+
+Tab:CreateDropdown({
+   Name = "Select Technology Ability",
+   Options = technologySpells,
+   CurrentOption = {},
+   MultipleOptions = true,
+   Flag = "TechnologySpellsDropdown",
+   Callback = function(Options)
+      game:GetService("ReplicatedStorage").RemoteEvent:FireServer("equip_mystery_spell", Options[1])
+   end,
+})
+
+-- Gravity Section
+gravitySpells = {
+   "Gravity Katana",
+   "Heavy Infliction",
+   "Tectonic Barrage",
+   "Gravity Orb",
+   "Tectonic Burst",
+   "Zero Gravity",
+   "Gravity Globe"
+}
+
+Tab:CreateDropdown({
+   Name = "Select Gravity Ability",
+   Options = gravitySpells,
+   CurrentOption = {},
+   MultipleOptions = true,
+   Flag = "GravitySpellsDropdown",
+   Callback = function(Options)
+      game:GetService("ReplicatedStorage").RemoteEvent:FireServer("equip_mystery_spell", Options[1])
+   end,
+})
+
+-- Lava Section
+lavaSpells = {
+   "Lava Katana",
+   "Lava Ball",
+   "Magma Fists",
+   "Lava Dash",
+   "Volcano Sentry",
+   "Magma Spikes",
+   "Nibiru"
+}
+
+Tab:CreateDropdown({
+   Name = "Select Lava Ability",
+   Options = lavaSpells,
+   CurrentOption = {},
+   MultipleOptions = true,
+   Flag = "LavaSpellsDropdown",
+   Callback = function(Options)
+      game:GetService("ReplicatedStorage").RemoteEvent:FireServer("equip_mystery_spell", Options[1])
+   end,
+})
+
+Tab:CreateSection("Special Abilites")
+
+-- SuperSonic Section
+superSonicSpells = {
+   "Sonic Blaster",
+   "Sonic Barrage",
+   "Sonic Twister",
+   "Rebound Teleport",
+   "Rebound Blast",
+   "Sonic Boom",
+   "Super Sonic Wave"
+}
+
+Tab:CreateDropdown({
+   Name = "Select SuperSonic Ability",
+   Options = superSonicSpells,
+   CurrentOption = {},
+   MultipleOptions = true,
+   Flag = "SuperSonicSpellsDropdown",
+   Callback = function(Options)
+      game:GetService("ReplicatedStorage").RemoteEvent:FireServer("equip_mystery_spell", Options[1])
+   end,
+})
+
+-- Water Section
+waterSpells = {
+   "Atlan's Trident",
+   "Jellyfish",
+   "Bubbles",
+   "Bubble Dash",
+   "Aqua Trident",
+   "Water Beam",
+   "Big Tsunami"
+}
+
+Tab:CreateDropdown({
+   Name = "Select Water Ability",
+   Options = waterSpells,
+   CurrentOption = {},
+   MultipleOptions = true,
+   Flag = "WaterSpellsDropdown",
+   Callback = function(Options)
+      game:GetService("ReplicatedStorage").RemoteEvent:FireServer("equip_mystery_spell", Options[1])
+   end,
+})
+
+-- Rebirth Section
+rebirthAbilities = {
+   "Dark Flames",
+   "Draedon's Tech",
+   "Yoru",
+   "Plasma Orbs",
+   "Red Saucer",
+   "Undead Staff",
+   "Elysian Beam",
+   "Bubble Flail",
+   "Poison Serpent"
+}
+
+Tab:CreateDropdown({
+   Name = "Select Rebirth Ability",
+   Options = rebirthAbilities,
+   CurrentOption = {},
+   MultipleOptions = true,
+   Flag = "RebirthAbilitiesDropdown",
+   Callback = function(Options)
+      game:GetService("ReplicatedStorage").RemoteEvent:FireServer("equip_mystery_spell", Options[1])
+   end,
+})
+
+-- Misc Section
+miscSpells = {
+   "Health Potion",
+   "Speed Potion",
+   "Portal Potion",
+   "Halloween Sword",
+   "Rocket Launcher",
+   "Cruel Sun",
+   "Cold Slap",
+   "Time Slap",
+   "Jay"
+}
+
+Tab:CreateDropdown({
+   Name = "Select Items",
+   Options = miscSpells,
+   CurrentOption = {},
+   MultipleOptions = true,
+   Flag = "MiscSpellsDropdown",
+   Callback = function(Options)
+      game:GetService("ReplicatedStorage").RemoteEvent:FireServer("equip_mystery_spell", Options[1])
+   end,
+})
